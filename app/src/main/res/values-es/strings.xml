@@ -1,0 +1,57 @@
+<resources>
+
+    <string name="app_name">Funciones</string>
+    <string name="player_error">Error en la iniciación de Youtube: %s</string>
+    <string name="seek_to">Salta a</string>
+    <string name="seek_to_hint">Segundos</string>
+    <string name="correct">¡Correcto! Enhorabuena</string>
+    <string name="incorrect">¡Incorrecto! Intentalo de nuevo!</string>
+    <string name="title">Halla cual es el resultado de las siguientes cuestiones:</string>
+    <string name="title2">Halla la función, el eje de simetría, la pendiente, la ordenada en el origen y lo que sea apropiado en cada caso:</string>
+    <string name="submit">Comprueba</string>
+    <string name="title_main">Tema 1</string>
+    <string name="Subtitle_main">Funciones Constantes</string>
+    <string name="title_main2">Tema 2</string>
+    <string name="Subtitle_main2">Funciones Lineales</string>
+    <string name="Subtitle2_main">Funciones de proporcionalidad directa o Lineal</string>
+    <string name="Subtitle2_2_main">Funciones Afines</string>
+    <string name="ExercicesActivity">Ejercicios</string>
+    <string name="title_main3">Tema 3</string>
+    <string name="Subtitle_main3">Funciones polinómica de grado dos o  Parabólas</string>
+    <string name="title_main4">Tema 4</string>
+    <string name="subtitle_main4">Funciones proporcionalidad inversa o Hipérbolas</string>
+
+    <string name="title_mainEx">Exámen</string>
+    <string name="Subtitle_mainEx">Repaso</string>
+
+    <string name="y">y = </string>
+    <string name="ysin">y=</string>
+    <string name="x_enunciado">x = </string>
+    <string name="x2">x<sup>2</sup></string>
+    <string name="Numero">Nº</string>
+    <string name="vacio"></string>
+    <string name="x">x</string>
+
+    <string name="put_number">Por favor pon un número</string>
+    <string name="x_">x </string>
+    <string name="lineal">___________</string>
+
+    <string name="decrease">Decreciente</string>
+    <string name="crescent">Creciente</string>
+    <string name="mayor">">"</string>
+    <string name="ordenada">Ordenada en el origen: </string>
+    <string name="proporcionalidad">Const. de proporcionalidad inversa: k= </string>
+    <string name="simetria">Eje de simetría: x= </string>
+
+    <string name="decrease_left">Decreciente rama de la izquierda</string>
+    <string name="crescent_left">Creciente rama de la izquierda</string>
+    <string name="decrease_right">Decreciente rama de la derecha</string>
+    <string name="crescent_right">Creciente rama de la derecha</string>
+
+    <string name="coordenadas">Coordenadas del vértice: (</string>
+    <string name="vertice_max">El vértice es un máximo</string>
+    <string name="vertice_min">El vértice es un mínimo</string>
+
+    <string name="nota">Nota: </string>
+
+</resources>

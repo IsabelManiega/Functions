@@ -1,0 +1,55 @@
+<resources>
+
+    <string name="app_name">Functions</string>
+    <string name="player_error">Error initializing YouTube player: %s</string>
+    <string name="seek_to">Jump To</string>
+    <string name="seek_to_hint">Seconds</string>
+    <string name="correct">Correct!! Congratulation</string>
+    <string name="incorrect">Incorrect! Try again!</string>
+    <string name="title">What is the result of the following operations?</string>
+    <string name="title2">Find the function, axis of symmetry, the slope, the ordinate at the origin and what is appropriate in each case:</string>
+    <string name="submit">Submit</string>
+    <string name="title_main">Lesson 1</string>
+    <string name="Subtitle_main">Constant Functions</string>
+    <string name="title_main2">Lesson 2</string>
+    <string name="Subtitle_main2">Lineal Functions</string>
+    <string name="Subtitle2_main">Direct Proportionality Functions or linear</string>
+    <string name="Subtitle2_2_main">Related Functions</string>
+    <string name="ExercicesActivity">Exercices</string>
+    <string name="title_main3">Lesson 3</string>
+    <string name="Subtitle_main3"> Polynomial of degree 2 Function or Quadratic</string>
+    <string name="title_main4">Lesson 4</string>
+    <string name="subtitle_main4">Inversely Proportional Function or Hyperbolic</string>
+
+    <string name="title_mainEx">Test</string>
+    <string name="Subtitle_mainEx">Review</string>
+
+    <string name="y">y = </string>
+    <string name="ysin">y=</string>
+    <string name="x_enunciado">x = </string>
+    <string name="x2">x<sup>2</sup></string>
+    <string name="Numero">Nº</string>
+    <string name="vacio"></string>
+    <string name="x">x</string>
+    <string name="put_number">Please put the number</string>
+    <string name="x_">x </string>
+    <string name="lineal">____________</string>
+
+    <string name="decrease">Decreasing</string>
+    <string name="crescent">Increasing</string>
+    <string name="mayor">">"</string>
+    <string name="ordenada">The coordinates of the origin: </string>
+    <string name="proporcionalidad">Inverse proportionality constant: k= </string>
+    <string name="simetria">Axis of symmetry: x= </string>
+
+    <string name="decrease_left">It decreases from the left</string>
+    <string name="crescent_left">It increases from the left</string>
+    <string name="decrease_right">It decreases from the right</string>
+    <string name="crescent_right">It increases from the right</string>
+
+    <string name="coordenadas">Vertex coordinates: (</string>
+    <string name="vertice_max">The vertex is maximum</string>
+    <string name="vertice_min">The vertex is minimum</string>
+
+    <string name="nota">Score: </string>
+</resources>

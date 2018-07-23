@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.functions">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:largeHeap ="true"
+        android:theme="@style/AppTheme">
+        <!--android:largeHeap ="true" -Error lang.java.OutOfMemoryError-->
+        <activity android:name=".MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.functions.Theme1ExerActivity"
+            android:label="@string/ExercicesActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".MainActivity">
+        </activity>
+
+        <activity
+            android:name="com.functions.Theme2ExercActivity"
+            android:label="@string/Subtitle_main2"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".MainActivity">
+        </activity>
+
+        <activity
+            android:name="com.functions.ProportionDirectActivity"
+            android:label="@string/ExercicesActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".Theme2ExercActivity">
+        </activity>
+
+        <activity
+            android:name="com.functions.AfinesActivity"
+            android:label="@string/ExercicesActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".Theme2ExercActivity">
+        </activity>
+
+
+        <activity
+            android:name="com.functions.Theme3ExercActivity"
+            android:label="@string/ExercicesActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".MainActivity">
+        </activity>
+
+        <activity
+            android:name="com.functions.Theme4ExercActivity"
+            android:label="@string/ExercicesActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".MainActivity">
+        </activity>
+
+        <activity
+            android:name="com.functions.ExamenActivity"
+            android:label="@string/title_mainEx"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".MainActivity">
+        </activity>
+
+        <activity
+            android:name="com.functions.YoutubeActivity"
+            android:label="Video"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".Theme1ExerActivity">
+        </activity>
+
+        <activity
+            android:name="com.functions.Youtube2ppActivity"
+            android:label="Video"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".ProportionDirectActivity">
+        </activity>
+
+        <activity
+            android:name="com.functions.Youtube2afActivity"
+            android:label="Video"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".AfinesActivity">
+        </activity>
+
+        <activity
+            android:name="com.functions.Youtube3Activity"
+            android:label="Video"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".Theme3ExercActivity">
+        </activity>
+
+        <activity
+            android:name="com.functions.Youtube4Activity"
+            android:label="Video"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".Theme4ExercActivity">
+        </activity>
+
+        <activity
+            android:name="com.functions.YoutubeExActivity"
+            android:label="Video"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".ExamenActivity">
+        </activity>
+
+        <activity
+            android:name="com.functions.ImageActivity"
+            android:theme="@style/AppTheme.CustomTheme">
+        </activity>
+
+    </application>
+
+</manifest>
