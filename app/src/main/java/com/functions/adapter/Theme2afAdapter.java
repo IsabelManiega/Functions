@@ -16,6 +16,7 @@ import android.widget.TextView;
 import com.functions.ImageActivity;
 import com.functions.R;
 import com.functions.models.Theme2af;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -274,8 +275,7 @@ public class Theme2afAdapter extends ArrayAdapter<Theme2af> {
             // the getTag returns the viewHolder object set as a tag to the view
             holder = (ViewHolder)convertView.getTag();
         }
-
-        holder.image.setImageResource(mTheme.get(position).getImage());
+        Picasso.get().load(mTheme.get(position).getImage()).fit().into(holder.image);
         holder.image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

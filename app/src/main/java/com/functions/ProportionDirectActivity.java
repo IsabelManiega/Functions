@@ -49,6 +49,7 @@ public class ProportionDirectActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent back = new Intent(ProportionDirectActivity.this, Theme2ExercActivity.class);
                 startActivity(back);
+                finish();
             }
         });
 

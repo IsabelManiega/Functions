@@ -31,15 +31,18 @@ public class Theme2ExercActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent back = new Intent(Theme2ExercActivity.this, MainActivity.class);
                 startActivity(back);
+                finish();
             }
         });
 
         }
     public void pp_directa (View v){
         startActivity(new Intent (this, ProportionDirectActivity.class));
+        finish();
     }
 
     public void afines (View v){
         startActivity(new Intent (this, AfinesActivity.class));
+        finish();
     }
 }

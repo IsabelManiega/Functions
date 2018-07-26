@@ -50,6 +50,7 @@ public class Theme1ExerActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent back = new Intent(Theme1ExerActivity.this, MainActivity.class);
                 startActivity(back);
+                finish();
             }
         });
 

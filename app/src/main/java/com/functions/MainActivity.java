@@ -79,28 +79,27 @@ public class MainActivity extends AppCompatActivity {
                     if(RecyclerViewItemPosition == 0){
 
                         startActivity(new Intent(MainActivity.this, Theme1ExerActivity.class).putExtra("Theme", Theme));
+                        finish();
 
                     }else if (RecyclerViewItemPosition == 1){
 
                         startActivity(new Intent(MainActivity.this, Theme2ExercActivity.class).putExtra("Theme", Theme));
+                        finish();
 
                     }else if (RecyclerViewItemPosition == 2){
 
                         startActivity(new Intent(MainActivity.this, Theme3ExercActivity.class).putExtra("Theme", Theme));
+                        finish();
 
                     }else if (RecyclerViewItemPosition == 3){
 
                         startActivity(new Intent(MainActivity.this, Theme4ExercActivity.class).putExtra("Theme", Theme));
+                        finish();
 
-                    }else{
-
-                        startActivity(new Intent(MainActivity.this, ExamenActivity.class).putExtra("Theme", Theme));
-                }
-
-
-                    // Showing clicked item value on screen using toast message.
-                    //Toast.makeText(MainActivity.this, Number.get(RecyclerViewItemPosition), Toast.LENGTH_LONG).show();
-
+                    }else {
+                        startActivity(new Intent(getApplicationContext(), ExamenActivity.class).putExtra("Theme", Theme));
+                        finish();
+                    }
                 }
 
                 return false;

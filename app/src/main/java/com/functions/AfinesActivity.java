@@ -49,6 +49,7 @@ public class AfinesActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent back = new Intent(AfinesActivity.this, Theme2ExercActivity.class);
                 startActivity(back);
+                finish();
             }
         });
 

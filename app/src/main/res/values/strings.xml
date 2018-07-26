@@ -22,6 +22,8 @@
     <string name="subtitle_main4">Inversely Proportional Function or Hyperbolic</string>
 
     <string name="title_mainEx">Test</string>
+    <string name="test1">Test 1</string>
+    <string name="test2">Test 2</string>
     <string name="Subtitle_mainEx">Review</string>
 
     <string name="y">y = </string>
@@ -31,7 +33,7 @@
     <string name="Numero">Nº</string>
     <string name="vacio"></string>
     <string name="x">x</string>
-    <string name="put_number">Please put the number</string>
+    <string name="put_number">Please do not leave any field blank</string>
     <string name="x_">x </string>
     <string name="lineal">____________</string>
 
@@ -51,5 +53,6 @@
     <string name="vertice_max">The vertex is maximum</string>
     <string name="vertice_min">The vertex is minimum</string>
 
-    <string name="nota">Score: </string>
+    <string name="nota">Score:  </string>
+    <string name="porcentage">% </string>
 </resources>

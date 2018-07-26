@@ -21,26 +21,40 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabs"
+        style="@style/CategoryTab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="?attr/colorPrimary"/>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="70dp">
+        android:layout_marginTop="110dp"
+        android:orientation="vertical">
+
         <TextView
+            android:id="@+id/text_enunciado"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/title2"
-            android:textStyle="bold"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
-            android:id="@+id/text_enunciado"/>
+            android:text="@string/title2"
+            android:textStyle="bold" />
     </LinearLayout>
 
-    <include layout="@layout/content_examen"
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="165dp"/>
+    <!--<include layout="@layout/content_exam1"
         android:layout_height="match_parent"
         android:layout_width="match_parent"
-        android:layout_marginTop="125dp"/>
+        android:layout_marginTop="125dp"/>-->
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"

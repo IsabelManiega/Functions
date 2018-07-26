@@ -22,6 +22,8 @@
     <string name="subtitle_main4">Funciones proporcionalidad inversa o Hipérbolas</string>
 
     <string name="title_mainEx">Exámen</string>
+    <string name="test1">Exámen 1</string>
+    <string name="test2">Exámen 2</string>
     <string name="Subtitle_mainEx">Repaso</string>
 
     <string name="y">y = </string>
@@ -32,7 +34,7 @@
     <string name="vacio"></string>
     <string name="x">x</string>
 
-    <string name="put_number">Por favor pon un número</string>
+    <string name="put_number">Por favor, No dejes ningún campo vacio</string>
     <string name="x_">x </string>
     <string name="lineal">___________</string>
 
@@ -52,6 +54,7 @@
     <string name="vertice_max">El vértice es un máximo</string>
     <string name="vertice_min">El vértice es un mínimo</string>
 
-    <string name="nota">Nota: </string>
+    <string name="nota">Nota:  </string>
+    <string name="porcentage">% </string>
 
 </resources>

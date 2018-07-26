@@ -47,6 +47,7 @@ public class Theme3ExercActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent back = new Intent(Theme3ExercActivity.this, MainActivity.class);
                 startActivity(back);
+                finish();
             }
         });
 
