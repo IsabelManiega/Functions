@@ -38,7 +38,6 @@ public class Theme3Adapter extends ArrayAdapter<Theme3> {
     private String number5;
     private String number6;
 
-
     private int numberfinal;
     private int numberfinal2;
     private int numberfinal3;

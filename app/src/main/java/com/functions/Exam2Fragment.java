@@ -139,6 +139,7 @@ public class Exam2Fragment extends Fragment {
                 startActivity(intent);
             }
         });
+
         //Exercice 6
         SubmitSix.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -305,6 +305,7 @@ public class Theme1Adapter extends ArrayAdapter<Theme1> {
                                 Toast.makeText(mContext,R.string.format,Toast.LENGTH_SHORT).show();
                                 holder.editText1.setText(R.string.vacio);
                                 holder.result.setText(R.string.vacio);
+
                             }
                     }
                 }

@@ -599,6 +599,7 @@ public class Theme2ppAdapter extends ArrayAdapter<Theme2pp> {
                             holder.creciente_decreciente.setText(R.string.vacio);
                             holder.decreciente_creciente.setText(R.string.vacio);
                             holder.result.setText(R.string.vacio);
+
                         }
                     }
                 }

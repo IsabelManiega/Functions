@@ -38,7 +38,6 @@ public class Theme2afAdapter extends ArrayAdapter<Theme2af> {
     private String number5;
     private String number6;
     private String number7;
-    private String number8;
 
     private int numberfinal;
     private int numberfinal2;

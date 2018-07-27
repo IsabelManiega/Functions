@@ -51,7 +51,6 @@ public class Theme4Adapter extends ArrayAdapter<Theme4> {
         super(context, 0, theme);
         mContext = context;
         mTheme = theme;
-
     }
 
     @Override

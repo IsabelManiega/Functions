@@ -141,7 +141,8 @@ public class Exam1Fragment extends  Fragment {
                 startActivity(intent);
             }
         });
-            //Exercice 1
+
+        //Exercice 1
         SubmitOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
