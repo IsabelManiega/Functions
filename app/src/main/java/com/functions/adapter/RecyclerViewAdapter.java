@@ -1,3 +1,11 @@
+
+/*
+ * Created by Isabel Maniega on 27/07/18 10:56
+ * Copyright (c) 2018. All rights reserved.
+ *
+ * Last modified 27/07/18 10:56
+ */
+
 package com.functions.adapter;
 
 import android.content.Context;

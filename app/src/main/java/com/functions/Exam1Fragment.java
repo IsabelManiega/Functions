@@ -1,3 +1,10 @@
+/*
+ * Created by Isabel Maniega on 27/07/18 10:56
+ * Copyright (c) 2018. All rights reserved.
+ *
+ * Last modified 27/07/18 10:56
+ */
+
 package com.functions;
 
 import android.content.Intent;
@@ -10,6 +17,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 
@@ -18,6 +26,7 @@ import butterknife.ButterKnife;
 
 public class Exam1Fragment extends  Fragment {
 
+    float scoreTotal;
     float scoreOne;
     float scoreTwo;
     float scoreThree;
@@ -85,6 +94,8 @@ public class Exam1Fragment extends  Fragment {
             View rootView = inflater.inflate(R.layout.content_exam1, container, false);
             ButterKnife.bind(this, rootView);
 
+            scoreTotal = 0;
+
         Picasso.get().load(R.drawable.examen1).fit().into(Examen1);
         Examen1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -139,8 +150,7 @@ public class Exam1Fragment extends  Fragment {
                 String number2 = editText2.getText().toString();
                 String number3 = editText3.getText().toString();
                 if (number.isEmpty() || number2.isEmpty() || number3.isEmpty()) {
-                    resultOne.setText(R.string.put_number);
-                    resultOne.setTextColor(getResources().getColor(R.color.black));
+                    Toast.makeText(getContext(),R.string.put_number,Toast.LENGTH_SHORT).show();
                 } else {
                     int numberfinal = Integer.parseInt(number);
                     int numberfinal2 = Integer.parseInt(number2);
@@ -181,6 +191,9 @@ public class Exam1Fragment extends  Fragment {
                     resultOne.setText( String.valueOf(scoreOne));
                     resultOne.setTextColor(getResources().getColor(R.color.red));
 
+                    scoreTotal = scoreOne + scoreTwo + scoreThree + scoreFour + scoreFive;
+                    Toast.makeText(getContext(),String.valueOf(scoreTotal)+ "%",Toast.LENGTH_SHORT).show();
+
                 }
 
             }
@@ -198,8 +211,7 @@ public class Exam1Fragment extends  Fragment {
 
                     if (number4.isEmpty() || number5.isEmpty() ||
                             number6.isEmpty() || number7.isEmpty() || number8.isEmpty()) {
-                        resultTwo.setText(R.string.put_number);
-                        resultTwo.setTextColor(getResources().getColor(R.color.black));
+                        Toast.makeText(getContext(),R.string.put_number,Toast.LENGTH_SHORT).show();
                     } else {
                         String crecent = ">";
                         int numberfinal4 = Integer.parseInt(number4);
@@ -268,6 +280,9 @@ public class Exam1Fragment extends  Fragment {
                         }
                         resultTwo.setText(String.valueOf(scoreTwo));
                         resultTwo.setTextColor(getResources().getColor(R.color.red));
+
+                        scoreTotal = scoreOne + scoreTwo + scoreThree + scoreFour + scoreFive;
+                        Toast.makeText(getContext(),String.valueOf(scoreTotal)+ "%",Toast.LENGTH_SHORT).show();
                     }
                 }
             });
@@ -281,8 +296,7 @@ public class Exam1Fragment extends  Fragment {
                     String number11 = editText11.getText().toString();
 
                     if ( number9.isEmpty() || number10.isEmpty() || number11.isEmpty()) {
-                        resultThree.setText(R.string.put_number);
-                        resultThree.setTextColor(getResources().getColor(R.color.black));
+                        Toast.makeText(getContext(),R.string.put_number,Toast.LENGTH_SHORT).show();
                     } else {
                         String decrecent = "<";
                         int numberfinal9 = Integer.parseInt(number9);
@@ -321,6 +335,8 @@ public class Exam1Fragment extends  Fragment {
                         resultThree.setText( String.valueOf(scoreThree));
                         resultThree.setTextColor(getResources().getColor(R.color.red));
 
+                        scoreTotal = scoreOne + scoreTwo + scoreThree + scoreFour + scoreFive;
+                        Toast.makeText(getContext(),String.valueOf(scoreTotal)+ "%",Toast.LENGTH_SHORT).show();
 
                     }
                 }
@@ -336,8 +352,7 @@ public class Exam1Fragment extends  Fragment {
                     String number15 = editText15.getText().toString();
                     String number16 = editText16.getText().toString();
                     if ( number12.isEmpty() || number13.isEmpty()|| number15.isEmpty() || number16.isEmpty()) {
-                        resultFour.setText(R.string.put_number);
-                        resultFour.setTextColor(getResources().getColor(R.color.black));
+                        Toast.makeText(getContext(),R.string.put_number,Toast.LENGTH_SHORT).show();
                     } else {
                         String decrecent = "<";
                         int numberfinal12 = Integer.parseInt(number12);
@@ -418,6 +433,8 @@ public class Exam1Fragment extends  Fragment {
                         resultFour.setText( String.valueOf(scoreFour));
                         resultFour.setTextColor(getResources().getColor(R.color.red));
 
+                        scoreTotal = scoreOne + scoreTwo + scoreThree + scoreFour + scoreFive;
+                        Toast.makeText(getContext(),String.valueOf(scoreTotal)+ "%",Toast.LENGTH_SHORT).show();
                     }
                 }
             });
@@ -435,8 +452,7 @@ public class Exam1Fragment extends  Fragment {
                     String number22 = editText22.getText().toString();
                     if (number17.isEmpty() || number18.isEmpty() || number19.isEmpty() ||
                             number20.isEmpty() || number21.isEmpty() || number22.isEmpty()) {
-                        resultFive.setText(R.string.put_number);
-                        resultFive.setTextColor(getResources().getColor(R.color.black));
+                        Toast.makeText(getContext(),R.string.put_number,Toast.LENGTH_SHORT).show();
                     } else {
                         int numberfinal17 = Integer.parseInt(number17);
                         int numberfinal18 = Integer.parseInt(number18);
@@ -544,9 +560,13 @@ public class Exam1Fragment extends  Fragment {
                         resultFive.setText( String.valueOf(scoreFive));
                         resultFive.setTextColor(getResources().getColor(R.color.red));
 
+                        scoreTotal = scoreOne + scoreTwo + scoreThree + scoreFour + scoreFive;
+                        Toast.makeText(getContext(),String.valueOf(scoreTotal)+ "%",Toast.LENGTH_SHORT).show();
+
                     }
                 }
             });
+
 
             return rootView;
     }

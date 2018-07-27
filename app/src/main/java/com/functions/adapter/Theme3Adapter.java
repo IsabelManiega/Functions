@@ -1,3 +1,10 @@
+/*
+ * Created by Isabel Maniega on 27/07/18 10:56
+ * Copyright (c) 2018. All rights reserved.
+ *
+ * Last modified 27/07/18 10:56
+ */
+
 package com.functions.adapter;
 
 import android.content.Context;
@@ -12,6 +19,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.functions.ImageActivity;
 import com.functions.R;
@@ -260,8 +268,6 @@ public class Theme3Adapter extends ArrayAdapter<Theme3> {
 
         holder.title.setText(mTheme.get(position).getTitle());
 
-
-        //holder.textView1.setText(mTheme.get(position).getTextView1());
         if (mTheme.get(position).hasTextView1()) {
             holder.textView1.setText(mTheme.get(position).getTextView1());
             holder.textView1.setVisibility(View.VISIBLE);
@@ -269,7 +275,6 @@ public class Theme3Adapter extends ArrayAdapter<Theme3> {
             holder.textView1.setVisibility(View.GONE);
         }
 
-        //holder.textView2.setText(mTheme.get(position).getTextView2());
         if (mTheme.get(position).hasTextView2()) {
             holder.textView2.setText(mTheme.get(position).getTextView2());
             holder.textView2.setVisibility(View.VISIBLE);
@@ -289,8 +294,7 @@ public class Theme3Adapter extends ArrayAdapter<Theme3> {
                     number5 = holder.editText5.getText().toString();
                     number6 = holder.editText6.getText().toString();
                     if (number.isEmpty()|| number4.isEmpty() || number5.isEmpty() || number6.isEmpty()) {
-                        holder.result.setText(R.string.put_number);
-                        holder.result.setTextColor(mContext.getResources().getColor(R.color.black));
+                        Toast.makeText(mContext,R.string.put_number,Toast.LENGTH_SHORT).show();
                     } else {
                         numberfinal = Integer.parseInt(number);
                         numberfinal4 = Integer.parseInt(number4);
@@ -318,8 +322,7 @@ public class Theme3Adapter extends ArrayAdapter<Theme3> {
                     number6 = holder.editText6.getText().toString();
                     if (number.isEmpty() || number3.isEmpty() || number4.isEmpty()
                             || number5.isEmpty() || number6.isEmpty()){
-                        holder.result.setText(R.string.put_number);
-                        holder.result.setTextColor(mContext.getResources().getColor(R.color.black));
+                        Toast.makeText(mContext,R.string.put_number,Toast.LENGTH_SHORT).show();
                     } else {
                         numberfinal = Integer.parseInt(number);
                         numberfinal2 = Integer.parseInt(number3);
@@ -349,8 +352,7 @@ public class Theme3Adapter extends ArrayAdapter<Theme3> {
                     number6 = holder.editText6.getText().toString();
                     if (number.isEmpty() || number4.isEmpty()
                             || number5.isEmpty() || number6.isEmpty()) {
-                        holder.result.setText(R.string.put_number);
-                        holder.result.setTextColor(mContext.getResources().getColor(R.color.black));
+                        Toast.makeText(mContext,R.string.put_number,Toast.LENGTH_SHORT).show();
                     } else {
                         numberfinal = Integer.parseInt(number);
                         numberfinal4 = Integer.parseInt(number4);
@@ -378,8 +380,7 @@ public class Theme3Adapter extends ArrayAdapter<Theme3> {
                     number6 = holder.editText6.getText().toString();
                     if (number.isEmpty() || number3.isEmpty() || number4.isEmpty()
                             || number5.isEmpty() || number6.isEmpty()) {
-                        holder.result.setText(R.string.put_number);
-                        holder.result.setTextColor(mContext.getResources().getColor(R.color.black));
+                        Toast.makeText(mContext,R.string.put_number,Toast.LENGTH_SHORT).show();
                     } else {
                         numberfinal = Integer.parseInt(number);
                         numberfinal2 = Integer.parseInt(number3);
@@ -410,8 +411,7 @@ public class Theme3Adapter extends ArrayAdapter<Theme3> {
                     number6 = holder.editText6.getText().toString();
                     if (number.isEmpty()|| number2.isEmpty() || number3.isEmpty()
                             || number4.isEmpty() || number5.isEmpty() || number6.isEmpty()) {
-                        holder.result.setText(R.string.put_number);
-                        holder.result.setTextColor(mContext.getResources().getColor(R.color.black));
+                        Toast.makeText(mContext,R.string.put_number,Toast.LENGTH_SHORT).show();
                     } else {
                         numberfinal = Integer.parseInt(number);
                         numberfinal3 = Integer.parseInt(number2);
@@ -443,8 +443,7 @@ public class Theme3Adapter extends ArrayAdapter<Theme3> {
                     number6 = holder.editText6.getText().toString();
                     if (number.isEmpty()|| number2.isEmpty() || number3.isEmpty()
                             || number4.isEmpty() || number5.isEmpty() || number6.isEmpty()) {
-                        holder.result.setText(R.string.put_number);
-                        holder.result.setTextColor(mContext.getResources().getColor(R.color.black));
+                        Toast.makeText(mContext,R.string.put_number,Toast.LENGTH_SHORT).show();
                     } else {
                         numberfinal = Integer.parseInt(number);
                         numberfinal3 = Integer.parseInt(number2);
@@ -476,8 +475,7 @@ public class Theme3Adapter extends ArrayAdapter<Theme3> {
                     number6 = holder.editText6.getText().toString();
                     if (number.isEmpty()|| number2.isEmpty() || number3.isEmpty()
                             || number4.isEmpty() || number5.isEmpty() || number6.isEmpty()) {
-                        holder.result.setText(R.string.put_number);
-                        holder.result.setTextColor(mContext.getResources().getColor(R.color.black));
+                        Toast.makeText(mContext,R.string.put_number,Toast.LENGTH_SHORT).show();
                     } else {
                         numberfinal = Integer.parseInt(number);
                         numberfinal3 = Integer.parseInt(number2);
@@ -508,8 +506,7 @@ public class Theme3Adapter extends ArrayAdapter<Theme3> {
                     number6 = holder.editText6.getText().toString();
                     if (number.isEmpty()|| number2.isEmpty()
                             || number4.isEmpty() || number5.isEmpty() || number6.isEmpty()) {
-                        holder.result.setText(R.string.put_number);
-                        holder.result.setTextColor(mContext.getResources().getColor(R.color.black));
+                        Toast.makeText(mContext,R.string.put_number,Toast.LENGTH_SHORT).show();
                     } else {
                         numberfinal = Integer.parseInt(number);
                         numberfinal3 = Integer.parseInt(number2);
@@ -540,8 +537,7 @@ public class Theme3Adapter extends ArrayAdapter<Theme3> {
                     number6 = holder.editText6.getText().toString();
                     if (number.isEmpty()|| number2.isEmpty() || number3.isEmpty()
                             || number4.isEmpty() || number5.isEmpty() || number6.isEmpty()) {
-                        holder.result.setText(R.string.put_number);
-                        holder.result.setTextColor(mContext.getResources().getColor(R.color.black));
+                        Toast.makeText(mContext,R.string.put_number,Toast.LENGTH_SHORT).show();
                     } else {
                         numberfinal = Integer.parseInt(number);
                         numberfinal3 = Integer.parseInt(number2);
@@ -573,8 +569,7 @@ public class Theme3Adapter extends ArrayAdapter<Theme3> {
                     number6 = holder.editText6.getText().toString();
                     if (number.isEmpty()|| number2.isEmpty() || number3.isEmpty()
                             || number4.isEmpty() || number5.isEmpty() || number6.isEmpty()) {
-                        holder.result.setText(R.string.put_number);
-                        holder.result.setTextColor(mContext.getResources().getColor(R.color.black));
+                        Toast.makeText(mContext,R.string.put_number,Toast.LENGTH_SHORT).show();
                     } else {
                         numberfinal = Integer.parseInt(number);
                         numberfinal3 = Integer.parseInt(number2);

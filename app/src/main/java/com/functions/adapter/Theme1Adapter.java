@@ -1,3 +1,10 @@
+/*
+ * Created by Isabel Maniega on 27/07/18 10:56
+ * Copyright (c) 2018. All rights reserved.
+ *
+ * Last modified 27/07/18 10:56
+ */
+
 package com.functions.adapter;
 
 import android.content.Context;
@@ -12,6 +19,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.functions.ImageActivity;
 import com.functions.R;
@@ -120,8 +128,7 @@ public class Theme1Adapter extends ArrayAdapter<Theme1> {
                 if (pos == 0) {
                     number = holder.editText1.getText().toString();
                     if (number.isEmpty()) {
-                        holder.result.setText(R.string.put_number);
-                        holder.result.setTextColor(mContext.getResources().getColor(R.color.black));
+                        Toast.makeText(mContext,R.string.put_number,Toast.LENGTH_SHORT).show();
                     } else {
                         numberfinal = Integer.parseInt(number);
                         if (numberfinal != 2) {
@@ -135,8 +142,7 @@ public class Theme1Adapter extends ArrayAdapter<Theme1> {
                 } else if (pos == 1) {
                     number = holder.editText1.getText().toString();
                     if (number.isEmpty()) {
-                        holder.result.setText(R.string.put_number);
-                        holder.result.setTextColor(mContext.getResources().getColor(R.color.black));
+                        Toast.makeText(mContext,R.string.put_number,Toast.LENGTH_SHORT).show();
                     } else {
                         numberfinal = Integer.parseInt(number);
                         if (numberfinal != 3) {
@@ -152,8 +158,7 @@ public class Theme1Adapter extends ArrayAdapter<Theme1> {
                 } else if (pos == 2) {
                     number = holder.editText1.getText().toString();
                     if (number.isEmpty()) {
-                        holder.result.setText(R.string.put_number);
-                        holder.result.setTextColor(mContext.getResources().getColor(R.color.black));
+                        Toast.makeText(mContext,R.string.put_number,Toast.LENGTH_SHORT).show();
                     } else {
                         numberfinal = Integer.parseInt(number);
                         if (numberfinal != 1) {
@@ -167,8 +172,7 @@ public class Theme1Adapter extends ArrayAdapter<Theme1> {
                 } else if (pos == 3) {
                     number = holder.editText1.getText().toString();
                     if (number.isEmpty()) {
-                        holder.result.setText(R.string.put_number);
-                        holder.result.setTextColor(mContext.getResources().getColor(R.color.black));
+                        Toast.makeText(mContext,R.string.put_number,Toast.LENGTH_SHORT).show();
                     } else {
                         numberfinal = Integer.parseInt(number);
                         if (numberfinal != -2) {
@@ -182,8 +186,7 @@ public class Theme1Adapter extends ArrayAdapter<Theme1> {
                 } else if (pos == 4) {
                     number = holder.editText1.getText().toString();
                     if (number.isEmpty()) {
-                        holder.result.setText(R.string.put_number);
-                        holder.result.setTextColor(mContext.getResources().getColor(R.color.black));
+                        Toast.makeText(mContext,R.string.put_number,Toast.LENGTH_SHORT).show();
                     } else {
                         numberfinal = Integer.parseInt(number);
                         if (numberfinal != -4) {
@@ -197,8 +200,7 @@ public class Theme1Adapter extends ArrayAdapter<Theme1> {
                 } else if (pos == 5) {
                     number = holder.editText1.getText().toString();
                     if (number.isEmpty()) {
-                        holder.result.setText(R.string.put_number);
-                        holder.result.setTextColor(mContext.getResources().getColor(R.color.black));
+                        Toast.makeText(mContext,R.string.put_number,Toast.LENGTH_SHORT).show();
                     } else {
                         numberfinal = Integer.parseInt(number);
                         if (numberfinal != -5) {
@@ -212,8 +214,7 @@ public class Theme1Adapter extends ArrayAdapter<Theme1> {
                 } else if (pos == 6) {
                     number = holder.editText1.getText().toString();
                     if (number.isEmpty()) {
-                        holder.result.setText(R.string.put_number);
-                        holder.result.setTextColor(mContext.getResources().getColor(R.color.black));
+                        Toast.makeText(mContext,R.string.put_number,Toast.LENGTH_SHORT).show();
                     } else {
                         numberfinal = Integer.parseInt(number);
                         if (numberfinal != -7) {
@@ -227,8 +228,7 @@ public class Theme1Adapter extends ArrayAdapter<Theme1> {
                 } else if (pos == 7) {
                     number = holder.editText1.getText().toString();
                     if (number.isEmpty()) {
-                        holder.result.setText(R.string.put_number);
-                        holder.result.setTextColor(mContext.getResources().getColor(R.color.black));
+                        Toast.makeText(mContext,R.string.put_number,Toast.LENGTH_SHORT).show();
                     } else {
                         numberfinal = Integer.parseInt(number);
                         if (numberfinal != 4) {
@@ -242,8 +242,7 @@ public class Theme1Adapter extends ArrayAdapter<Theme1> {
                     } else {
                         number = holder.editText1.getText().toString();
                         if (number.isEmpty()) {
-                            holder.result.setText(R.string.put_number);
-                            holder.result.setTextColor(mContext.getResources().getColor(R.color.black));
+                            Toast.makeText(mContext,R.string.put_number,Toast.LENGTH_SHORT).show();
                         } else {
                             numberfinal = Integer.parseInt(number);
                             if (numberfinal != -6) {

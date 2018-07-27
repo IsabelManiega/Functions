@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by Isabel Maniega on 27/07/18 10:56
+  ~ Copyright (c) 2018. All rights reserved.
+  ~
+  ~ Last modified 27/07/18 10:56
+  -->
+
 <resources>
     <color name="colorPrimary">#009688</color>
     <color name="colorPrimaryDark">#00695C</color>
