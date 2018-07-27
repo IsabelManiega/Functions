@@ -334,26 +334,39 @@ public class Theme2afAdapter extends ArrayAdapter<Theme2af> {
                             || number6.isEmpty() || number7.isEmpty()) {
                         Toast.makeText(mContext,R.string.put_number,Toast.LENGTH_SHORT).show();
                     } else {
-                        numberfinal = Integer.parseInt(number);
-                        numberfinal2 = Integer.parseInt(number2);
-                        numberfinal3 = Integer.parseInt(number3);
-                        numberfinal4 = Integer.parseInt(number4);
-                        numberfinal6 = Integer.parseInt(number5);
-                        numberfinal5 = holder.creciente_decreciente.getText().toString();
-                        String crecent = ">";
-                        numberfinal7 = Integer.parseInt(number7);
+                        try{
+                            numberfinal = Integer.parseInt(number);
+                            numberfinal2 = Integer.parseInt(number2);
+                            numberfinal3 = Integer.parseInt(number3);
+                            numberfinal4 = Integer.parseInt(number4);
+                            numberfinal6 = Integer.parseInt(number5);
+                            numberfinal5 = holder.creciente_decreciente.getText().toString();
+                            String crecent = ">";
+                            numberfinal7 = Integer.parseInt(number7);
 
-                        if (numberfinal == 2 && numberfinal2 == 3 && numberfinal3 == -2 &&
-                                numberfinal4 == 2 && numberfinal6 == 3
-                                && numberfinal5.equals(crecent) && numberfinal7 == -2 ) {
-                            holder.decreciente_creciente.setText(R.string.crescent);
-                            holder.result.setText(R.string.correct);
-                            holder.result.setTextColor(mContext.getResources().getColor(R.color.green));
-                        } else {
-                            holder.decreciente_creciente.setText(R.string.vacio);
-                            holder.result.setText(R.string.incorrect);
-                            holder.result.setTextColor(mContext.getResources().getColor(R.color.red));
-                        }
+                            if (numberfinal == 2 && numberfinal2 == 3 && numberfinal3 == -2 &&
+                                    numberfinal4 == 2 && numberfinal6 == 3
+                                    && numberfinal5.equals(crecent) && numberfinal7 == -2 ) {
+                                holder.decreciente_creciente.setText(R.string.crescent);
+                                holder.result.setText(R.string.correct);
+                                holder.result.setTextColor(mContext.getResources().getColor(R.color.green));
+                            } else {
+                                holder.decreciente_creciente.setText(R.string.vacio);
+                                holder.result.setText(R.string.incorrect);
+                                holder.result.setTextColor(mContext.getResources().getColor(R.color.red));
+                            }
+                        } catch (NumberFormatException nfe){
+                        Toast.makeText(mContext,R.string.format,Toast.LENGTH_SHORT).show();
+                        holder.editText1.setText(R.string.vacio);
+                        holder.editText2.setText(R.string.vacio);
+                        holder.editText3.setText(R.string.vacio);
+                        holder.editText4.setText(R.string.vacio);
+                        holder.editText5.setText(R.string.vacio);
+                        holder.editText6.setText(R.string.vacio);
+                        holder.creciente_decreciente.setText(R.string.vacio);
+                        holder.decreciente_creciente.setText(R.string.vacio);
+                        holder.result.setText(R.string.vacio);
+                    }
                     }
                 } else if (pos == 1) {
                     number = holder.editText1.getText().toString();
@@ -368,27 +381,40 @@ public class Theme2afAdapter extends ArrayAdapter<Theme2af> {
                             || number6.isEmpty() || number7.isEmpty()) {
                         Toast.makeText(mContext,R.string.put_number,Toast.LENGTH_SHORT).show();
                     } else {
-                        numberfinal = Integer.parseInt(number);
-                        numberfinal2 = Integer.parseInt(number2);
-                        numberfinal3 = Integer.parseInt(number3);
-                        numberfinal4 = Integer.parseInt(number4);
-                        numberfinal6 = Integer.parseInt(number5);
-                        numberfinal5 = holder.creciente_decreciente.getText().toString();
-                        String crecent = ">";
-                        numberfinal7 = Integer.parseInt(number7);
+                        try{
+                            numberfinal = Integer.parseInt(number);
+                            numberfinal2 = Integer.parseInt(number2);
+                            numberfinal3 = Integer.parseInt(number3);
+                            numberfinal4 = Integer.parseInt(number4);
+                            numberfinal6 = Integer.parseInt(number5);
+                            numberfinal5 = holder.creciente_decreciente.getText().toString();
+                            String crecent = ">";
+                            numberfinal7 = Integer.parseInt(number7);
 
-                        if (numberfinal == 3 && numberfinal2 == 4 && numberfinal3 == 3 &&
-                                numberfinal4 == 3 && numberfinal6 == 4
-                                && numberfinal5.equals(crecent) && numberfinal7 == 3 ) {
+                            if (numberfinal == 3 && numberfinal2 == 4 && numberfinal3 == 3 &&
+                                    numberfinal4 == 3 && numberfinal6 == 4
+                                    && numberfinal5.equals(crecent) && numberfinal7 == 3 ) {
 
-                            holder.decreciente_creciente.setText(R.string.crescent);
-                            holder.result.setText(R.string.correct);
-                            holder.result.setTextColor(mContext.getResources().getColor(R.color.green));
-                        } else {
-                            holder.decreciente_creciente.setText(R.string.vacio);
-                            holder.result.setText(R.string.incorrect);
-                            holder.result.setTextColor(mContext.getResources().getColor(R.color.red));
-                        }
+                                holder.decreciente_creciente.setText(R.string.crescent);
+                                holder.result.setText(R.string.correct);
+                                holder.result.setTextColor(mContext.getResources().getColor(R.color.green));
+                            } else {
+                                holder.decreciente_creciente.setText(R.string.vacio);
+                                holder.result.setText(R.string.incorrect);
+                                holder.result.setTextColor(mContext.getResources().getColor(R.color.red));
+                            }
+                    } catch (NumberFormatException nfe){
+                        Toast.makeText(mContext,R.string.format,Toast.LENGTH_SHORT).show();
+                        holder.editText1.setText(R.string.vacio);
+                        holder.editText2.setText(R.string.vacio);
+                        holder.editText3.setText(R.string.vacio);
+                        holder.editText4.setText(R.string.vacio);
+                        holder.editText5.setText(R.string.vacio);
+                        holder.editText6.setText(R.string.vacio);
+                        holder.creciente_decreciente.setText(R.string.vacio);
+                        holder.decreciente_creciente.setText(R.string.vacio);
+                        holder.result.setText(R.string.vacio);
+                    }
                     }
 
                 } else if (pos == 2) {
@@ -401,23 +427,34 @@ public class Theme2afAdapter extends ArrayAdapter<Theme2af> {
                             || number4.isEmpty()  || number5.isEmpty()) {
                         Toast.makeText(mContext,R.string.put_number,Toast.LENGTH_SHORT).show();
                     } else {
-                        numberfinal = Integer.parseInt(number);
-                        numberfinal2 = Integer.parseInt(number2);
-                        numberfinal3 = Integer.parseInt(number3);
-                        numberfinal5 = holder.creciente_decreciente.getText().toString();
-                        String crecent = "<";
-                        numberfinal4 = Integer.parseInt(number5);
+                        try{
+                            numberfinal = Integer.parseInt(number);
+                            numberfinal2 = Integer.parseInt(number2);
+                            numberfinal3 = Integer.parseInt(number3);
+                            numberfinal5 = holder.creciente_decreciente.getText().toString();
+                            String crecent = "<";
+                            numberfinal4 = Integer.parseInt(number5);
 
-                        if (numberfinal == -1 && numberfinal2 == 1 && numberfinal3 == -1
-                                && numberfinal5.equals(crecent) && numberfinal4 == 1 ) {
-                            holder.decreciente_creciente.setText(R.string.decrease);
-                            holder.result.setText(R.string.correct);
-                            holder.result.setTextColor(mContext.getResources().getColor(R.color.green));
-                        } else {
-                            holder.decreciente_creciente.setText(R.string.vacio);
-                            holder.result.setText(R.string.incorrect);
-                            holder.result.setTextColor(mContext.getResources().getColor(R.color.red));
-                        }
+                            if (numberfinal == -1 && numberfinal2 == 1 && numberfinal3 == -1
+                                    && numberfinal5.equals(crecent) && numberfinal4 == 1 ) {
+                                holder.decreciente_creciente.setText(R.string.decrease);
+                                holder.result.setText(R.string.correct);
+                                holder.result.setTextColor(mContext.getResources().getColor(R.color.green));
+                            } else {
+                                holder.decreciente_creciente.setText(R.string.vacio);
+                                holder.result.setText(R.string.incorrect);
+                                holder.result.setTextColor(mContext.getResources().getColor(R.color.red));
+                            }
+                    } catch (NumberFormatException nfe){
+                        Toast.makeText(mContext,R.string.format,Toast.LENGTH_SHORT).show();
+                        holder.editText1.setText(R.string.vacio);
+                        holder.editText3.setText(R.string.vacio);
+                        holder.editText4.setText(R.string.vacio);
+                        holder.editText6.setText(R.string.vacio);
+                        holder.creciente_decreciente.setText(R.string.vacio);
+                        holder.decreciente_creciente.setText(R.string.vacio);
+                        holder.result.setText(R.string.vacio);
+                    }
                     }
                 } else if (pos == 3) {
                     number = holder.editText1.getText().toString();
@@ -429,24 +466,35 @@ public class Theme2afAdapter extends ArrayAdapter<Theme2af> {
                             || number4.isEmpty()  || number5.isEmpty()) {
                         Toast.makeText(mContext,R.string.put_number,Toast.LENGTH_SHORT).show();
                     } else {
-                        numberfinal = Integer.parseInt(number);
-                        numberfinal2 = Integer.parseInt(number2);
-                        numberfinal3 = Integer.parseInt(number3);
-                        numberfinal5 = holder.creciente_decreciente.getText().toString();
-                        String crecent = ">";
-                        numberfinal4 = Integer.parseInt(number5);
+                        try{
+                            numberfinal = Integer.parseInt(number);
+                            numberfinal2 = Integer.parseInt(number2);
+                            numberfinal3 = Integer.parseInt(number3);
+                            numberfinal5 = holder.creciente_decreciente.getText().toString();
+                            String crecent = ">";
+                            numberfinal4 = Integer.parseInt(number5);
 
-                        if (numberfinal == 1 && numberfinal2 == 2 && numberfinal3 == 1
-                                && numberfinal5.equals(crecent) && numberfinal4 == 2 ) {
+                            if (numberfinal == 1 && numberfinal2 == 2 && numberfinal3 == 1
+                                    && numberfinal5.equals(crecent) && numberfinal4 == 2 ) {
 
-                            holder.decreciente_creciente.setText(R.string.crescent);
-                            holder.result.setText(R.string.correct);
-                            holder.result.setTextColor(mContext.getResources().getColor(R.color.green));
-                        } else {
-                            holder.decreciente_creciente.setText(R.string.vacio);
-                            holder.result.setText(R.string.incorrect);
-                            holder.result.setTextColor(mContext.getResources().getColor(R.color.red));
-                        }
+                                holder.decreciente_creciente.setText(R.string.crescent);
+                                holder.result.setText(R.string.correct);
+                                holder.result.setTextColor(mContext.getResources().getColor(R.color.green));
+                            } else {
+                                holder.decreciente_creciente.setText(R.string.vacio);
+                                holder.result.setText(R.string.incorrect);
+                                holder.result.setTextColor(mContext.getResources().getColor(R.color.red));
+                            }
+                    } catch (NumberFormatException nfe){
+                        Toast.makeText(mContext,R.string.format,Toast.LENGTH_SHORT).show();
+                        holder.editText1.setText(R.string.vacio);
+                        holder.editText3.setText(R.string.vacio);
+                        holder.editText4.setText(R.string.vacio);
+                        holder.editText6.setText(R.string.vacio);
+                        holder.creciente_decreciente.setText(R.string.vacio);
+                        holder.decreciente_creciente.setText(R.string.vacio);
+                        holder.result.setText(R.string.vacio);
+                    }
                     }
                 } else if (pos == 4) {
                     number = holder.editText1.getText().toString();
@@ -461,25 +509,38 @@ public class Theme2afAdapter extends ArrayAdapter<Theme2af> {
                             || number6.isEmpty() || number7.isEmpty()) {
                         Toast.makeText(mContext,R.string.put_number,Toast.LENGTH_SHORT).show();
                     } else {
-                        numberfinal = Integer.parseInt(number);
-                        numberfinal2 = Integer.parseInt(number2);
-                        numberfinal3 = Integer.parseInt(number3);
-                        numberfinal4 = Integer.parseInt(number4);
-                        numberfinal6 = Integer.parseInt(number5);
-                        numberfinal5 = holder.creciente_decreciente.getText().toString();
-                        String crecent = ">";
-                        numberfinal7 = Integer.parseInt(number7);
+                        try{
+                            numberfinal = Integer.parseInt(number);
+                            numberfinal2 = Integer.parseInt(number2);
+                            numberfinal3 = Integer.parseInt(number3);
+                            numberfinal4 = Integer.parseInt(number4);
+                            numberfinal6 = Integer.parseInt(number5);
+                            numberfinal5 = holder.creciente_decreciente.getText().toString();
+                            String crecent = ">";
+                            numberfinal7 = Integer.parseInt(number7);
 
-                        if (numberfinal == 1 && numberfinal2 == 2 && numberfinal3 == -4 &&
-                                numberfinal4 == 1 && numberfinal6 == 2
-                                && numberfinal5.equals(crecent) && numberfinal7 == -4 ) {
-                            holder.decreciente_creciente.setText(R.string.crescent);
-                            holder.result.setText(R.string.correct);
-                            holder.result.setTextColor(mContext.getResources().getColor(R.color.green));
-                        } else {
+                            if (numberfinal == 1 && numberfinal2 == 2 && numberfinal3 == -4 &&
+                                    numberfinal4 == 1 && numberfinal6 == 2
+                                    && numberfinal5.equals(crecent) && numberfinal7 == -4 ) {
+                                holder.decreciente_creciente.setText(R.string.crescent);
+                                holder.result.setText(R.string.correct);
+                                holder.result.setTextColor(mContext.getResources().getColor(R.color.green));
+                            } else {
+                                holder.decreciente_creciente.setText(R.string.vacio);
+                                holder.result.setText(R.string.incorrect);
+                                holder.result.setTextColor(mContext.getResources().getColor(R.color.red));
+                            }
+                        } catch (NumberFormatException nfe){
+                            Toast.makeText(mContext,R.string.format,Toast.LENGTH_SHORT).show();
+                            holder.editText1.setText(R.string.vacio);
+                            holder.editText2.setText(R.string.vacio);
+                            holder.editText3.setText(R.string.vacio);
+                            holder.editText4.setText(R.string.vacio);
+                            holder.editText5.setText(R.string.vacio);
+                            holder.editText6.setText(R.string.vacio);
+                            holder.creciente_decreciente.setText(R.string.vacio);
                             holder.decreciente_creciente.setText(R.string.vacio);
-                            holder.result.setText(R.string.incorrect);
-                            holder.result.setTextColor(mContext.getResources().getColor(R.color.red));
+                            holder.result.setText(R.string.vacio);
                         }
                     }
                 } else if (pos == 5) {
@@ -495,25 +556,38 @@ public class Theme2afAdapter extends ArrayAdapter<Theme2af> {
                             || number6.isEmpty() || number7.isEmpty()) {
                         Toast.makeText(mContext,R.string.put_number,Toast.LENGTH_SHORT).show();
                     } else {
-                        numberfinal = Integer.parseInt(number);
-                        numberfinal2 = Integer.parseInt(number2);
-                        numberfinal3 = Integer.parseInt(number3);
-                        numberfinal4 = Integer.parseInt(number4);
-                        numberfinal6 = Integer.parseInt(number5);
-                        numberfinal5 = holder.creciente_decreciente.getText().toString();
-                        String crecent = ">";
-                        numberfinal7 = Integer.parseInt(number7);
+                        try{
+                            numberfinal = Integer.parseInt(number);
+                            numberfinal2 = Integer.parseInt(number2);
+                            numberfinal3 = Integer.parseInt(number3);
+                            numberfinal4 = Integer.parseInt(number4);
+                            numberfinal6 = Integer.parseInt(number5);
+                            numberfinal5 = holder.creciente_decreciente.getText().toString();
+                            String crecent = ">";
+                            numberfinal7 = Integer.parseInt(number7);
 
-                        if (numberfinal == 1 && numberfinal2 == 5 && numberfinal3 == -5 &&
-                                numberfinal4 == 1 && numberfinal6 == 5
-                                && numberfinal5.equals(crecent) && numberfinal7 == -5 ) {
-                            holder.decreciente_creciente.setText(R.string.crescent);
-                            holder.result.setText(R.string.correct);
-                            holder.result.setTextColor(mContext.getResources().getColor(R.color.green));
-                        } else {
+                            if (numberfinal == 1 && numberfinal2 == 5 && numberfinal3 == -5 &&
+                                    numberfinal4 == 1 && numberfinal6 == 5
+                                    && numberfinal5.equals(crecent) && numberfinal7 == -5 ) {
+                                holder.decreciente_creciente.setText(R.string.crescent);
+                                holder.result.setText(R.string.correct);
+                                holder.result.setTextColor(mContext.getResources().getColor(R.color.green));
+                            } else {
+                                holder.decreciente_creciente.setText(R.string.vacio);
+                                holder.result.setText(R.string.incorrect);
+                                holder.result.setTextColor(mContext.getResources().getColor(R.color.red));
+                            }
+                        } catch (NumberFormatException nfe){
+                            Toast.makeText(mContext,R.string.format,Toast.LENGTH_SHORT).show();
+                            holder.editText1.setText(R.string.vacio);
+                            holder.editText2.setText(R.string.vacio);
+                            holder.editText3.setText(R.string.vacio);
+                            holder.editText4.setText(R.string.vacio);
+                            holder.editText5.setText(R.string.vacio);
+                            holder.editText6.setText(R.string.vacio);
+                            holder.creciente_decreciente.setText(R.string.vacio);
                             holder.decreciente_creciente.setText(R.string.vacio);
-                            holder.result.setText(R.string.incorrect);
-                            holder.result.setTextColor(mContext.getResources().getColor(R.color.red));
+                            holder.result.setText(R.string.vacio);
                         }
                     }
                 } else if (pos == 6) {
@@ -526,22 +600,33 @@ public class Theme2afAdapter extends ArrayAdapter<Theme2af> {
                             || number4.isEmpty()  || number5.isEmpty()) {
                         Toast.makeText(mContext,R.string.put_number,Toast.LENGTH_SHORT).show();
                     } else {
-                        numberfinal = Integer.parseInt(number);
-                        numberfinal2 = Integer.parseInt(number2);
-                        numberfinal3 = Integer.parseInt(number3);
-                        numberfinal5 = holder.creciente_decreciente.getText().toString();
-                        String crecent = "<";
-                        numberfinal4 = Integer.parseInt(number5);
+                        try{
+                            numberfinal = Integer.parseInt(number);
+                            numberfinal2 = Integer.parseInt(number2);
+                            numberfinal3 = Integer.parseInt(number3);
+                            numberfinal5 = holder.creciente_decreciente.getText().toString();
+                            String crecent = "<";
+                            numberfinal4 = Integer.parseInt(number5);
 
-                        if (numberfinal == -1 && numberfinal2 == -2 && numberfinal3 == -1
-                                && numberfinal5.equals(crecent) && numberfinal4 == -2 ) {
-                            holder.decreciente_creciente.setText(R.string.decrease);
-                            holder.result.setText(R.string.correct);
-                            holder.result.setTextColor(mContext.getResources().getColor(R.color.green));
-                        } else {
+                            if (numberfinal == -1 && numberfinal2 == -2 && numberfinal3 == -1
+                                    && numberfinal5.equals(crecent) && numberfinal4 == -2 ) {
+                                holder.decreciente_creciente.setText(R.string.decrease);
+                                holder.result.setText(R.string.correct);
+                                holder.result.setTextColor(mContext.getResources().getColor(R.color.green));
+                            } else {
+                                holder.decreciente_creciente.setText(R.string.vacio);
+                                holder.result.setText(R.string.incorrect);
+                                holder.result.setTextColor(mContext.getResources().getColor(R.color.red));
+                            }
+                        } catch (NumberFormatException nfe){
+                            Toast.makeText(mContext,R.string.format,Toast.LENGTH_SHORT).show();
+                            holder.editText1.setText(R.string.vacio);
+                            holder.editText3.setText(R.string.vacio);
+                            holder.editText4.setText(R.string.vacio);
+                            holder.editText6.setText(R.string.vacio);
+                            holder.creciente_decreciente.setText(R.string.vacio);
                             holder.decreciente_creciente.setText(R.string.vacio);
-                            holder.result.setText(R.string.incorrect);
-                            holder.result.setTextColor(mContext.getResources().getColor(R.color.red));
+                            holder.result.setText(R.string.vacio);
                         }
                     }
                 } else if (pos == 7) {
@@ -557,26 +642,40 @@ public class Theme2afAdapter extends ArrayAdapter<Theme2af> {
                             || number6.isEmpty() || number7.isEmpty()) {
                         Toast.makeText(mContext,R.string.put_number,Toast.LENGTH_SHORT).show();
                     } else {
-                        numberfinal = Integer.parseInt(number);
-                        numberfinal2 = Integer.parseInt(number2);
-                        numberfinal3 = Integer.parseInt(number3);
-                        numberfinal4 = Integer.parseInt(number4);
-                        numberfinal6 = Integer.parseInt(number5);
-                        numberfinal5 = holder.creciente_decreciente.getText().toString();
-                        String crecent = ">";
-                        numberfinal7 = Integer.parseInt(number7);
+                        try{
+                            numberfinal = Integer.parseInt(number);
+                            numberfinal2 = Integer.parseInt(number2);
+                            numberfinal3 = Integer.parseInt(number3);
+                            numberfinal4 = Integer.parseInt(number4);
+                            numberfinal6 = Integer.parseInt(number5);
+                            numberfinal5 = holder.creciente_decreciente.getText().toString();
+                            String crecent = ">";
+                            numberfinal7 = Integer.parseInt(number7);
 
-                        if (numberfinal == 7 && numberfinal2 == 3 && numberfinal3 == 4 &&
-                                numberfinal4 == 7 && numberfinal6 == 3
-                                && numberfinal5.equals(crecent) && numberfinal7 == 4 ) {
-                            holder.decreciente_creciente.setText(R.string.crescent);
-                            holder.result.setText(R.string.correct);
-                            holder.result.setTextColor(mContext.getResources().getColor(R.color.green));
-                        } else {
-                            holder.decreciente_creciente.setText(R.string.vacio);
-                            holder.result.setText(R.string.incorrect);
-                            holder.result.setTextColor(mContext.getResources().getColor(R.color.red));
-                        }
+                            if (numberfinal == 7 && numberfinal2 == 3 && numberfinal3 == 4 &&
+                                    numberfinal4 == 7 && numberfinal6 == 3
+                                    && numberfinal5.equals(crecent) && numberfinal7 == 4 ) {
+                                holder.decreciente_creciente.setText(R.string.crescent);
+                                holder.result.setText(R.string.correct);
+                                holder.result.setTextColor(mContext.getResources().getColor(R.color.green));
+                            } else {
+                                holder.decreciente_creciente.setText(R.string.vacio);
+                                holder.result.setText(R.string.incorrect);
+                                holder.result.setTextColor(mContext.getResources().getColor(R.color.red));
+                            }
+
+                    } catch (NumberFormatException nfe){
+                        Toast.makeText(mContext,R.string.format,Toast.LENGTH_SHORT).show();
+                        holder.editText1.setText(R.string.vacio);
+                        holder.editText2.setText(R.string.vacio);
+                        holder.editText3.setText(R.string.vacio);
+                        holder.editText4.setText(R.string.vacio);
+                        holder.editText5.setText(R.string.vacio);
+                        holder.editText6.setText(R.string.vacio);
+                        holder.creciente_decreciente.setText(R.string.vacio);
+                        holder.decreciente_creciente.setText(R.string.vacio);
+                        holder.result.setText(R.string.vacio);
+                    }
                     }
                 } else if (pos == 8) {
                     number = holder.editText1.getText().toString();
@@ -588,22 +687,33 @@ public class Theme2afAdapter extends ArrayAdapter<Theme2af> {
                             || number4.isEmpty()  || number5.isEmpty()) {
                         Toast.makeText(mContext,R.string.put_number,Toast.LENGTH_SHORT).show();
                     } else {
-                        numberfinal = Integer.parseInt(number);
-                        numberfinal2 = Integer.parseInt(number2);
-                        numberfinal3 = Integer.parseInt(number3);
-                        numberfinal5 = holder.creciente_decreciente.getText().toString();
-                        String crecent = "<";
-                        numberfinal4 = Integer.parseInt(number5);
+                        try{
+                            numberfinal = Integer.parseInt(number);
+                            numberfinal2 = Integer.parseInt(number2);
+                            numberfinal3 = Integer.parseInt(number3);
+                            numberfinal5 = holder.creciente_decreciente.getText().toString();
+                            String crecent = "<";
+                            numberfinal4 = Integer.parseInt(number5);
 
-                        if (numberfinal == -5 && numberfinal2 == -2 && numberfinal3 == -5
-                                && numberfinal5.equals(crecent) && numberfinal4 == -2 ) {
-                            holder.decreciente_creciente.setText(R.string.decrease);
-                            holder.result.setText(R.string.correct);
-                            holder.result.setTextColor(mContext.getResources().getColor(R.color.green));
-                        } else {
+                            if (numberfinal == -5 && numberfinal2 == -2 && numberfinal3 == -5
+                                    && numberfinal5.equals(crecent) && numberfinal4 == -2 ) {
+                                holder.decreciente_creciente.setText(R.string.decrease);
+                                holder.result.setText(R.string.correct);
+                                holder.result.setTextColor(mContext.getResources().getColor(R.color.green));
+                            } else {
+                                holder.decreciente_creciente.setText(R.string.vacio);
+                                holder.result.setText(R.string.incorrect);
+                                holder.result.setTextColor(mContext.getResources().getColor(R.color.red));
+                            }
+                        } catch (NumberFormatException nfe){
+                            Toast.makeText(mContext,R.string.format,Toast.LENGTH_SHORT).show();
+                            holder.editText1.setText(R.string.vacio);
+                            holder.editText3.setText(R.string.vacio);
+                            holder.editText4.setText(R.string.vacio);
+                            holder.editText6.setText(R.string.vacio);
+                            holder.creciente_decreciente.setText(R.string.vacio);
                             holder.decreciente_creciente.setText(R.string.vacio);
-                            holder.result.setText(R.string.incorrect);
-                            holder.result.setTextColor(mContext.getResources().getColor(R.color.red));
+                            holder.result.setText(R.string.vacio);
                         }
                     }
                 } else {
@@ -619,25 +729,38 @@ public class Theme2afAdapter extends ArrayAdapter<Theme2af> {
                             || number6.isEmpty() || number7.isEmpty()) {
                         Toast.makeText(mContext,R.string.put_number,Toast.LENGTH_SHORT).show();
                     } else {
-                        numberfinal = Integer.parseInt(number);
-                        numberfinal2 = Integer.parseInt(number2);
-                        numberfinal3 = Integer.parseInt(number3);
-                        numberfinal4 = Integer.parseInt(number4);
-                        numberfinal6 = Integer.parseInt(number5);
-                        numberfinal5 = holder.creciente_decreciente.getText().toString();
-                        String crecent = ">";
-                        numberfinal7 = Integer.parseInt(number7);
+                        try{
+                            numberfinal = Integer.parseInt(number);
+                            numberfinal2 = Integer.parseInt(number2);
+                            numberfinal3 = Integer.parseInt(number3);
+                            numberfinal4 = Integer.parseInt(number4);
+                            numberfinal6 = Integer.parseInt(number5);
+                            numberfinal5 = holder.creciente_decreciente.getText().toString();
+                            String crecent = ">";
+                            numberfinal7 = Integer.parseInt(number7);
 
-                        if (numberfinal == 2 && numberfinal2 == 7 && numberfinal3 == -6 &&
-                                numberfinal4 == 2 && numberfinal6 == 7
-                                && numberfinal5.equals(crecent) && numberfinal7 == -6 ) {
-                            holder.decreciente_creciente.setText(R.string.crescent);
-                            holder.result.setText(R.string.correct);
-                            holder.result.setTextColor(mContext.getResources().getColor(R.color.green));
-                        } else {
+                            if (numberfinal == 2 && numberfinal2 == 7 && numberfinal3 == -6 &&
+                                    numberfinal4 == 2 && numberfinal6 == 7
+                                    && numberfinal5.equals(crecent) && numberfinal7 == -6 ) {
+                                holder.decreciente_creciente.setText(R.string.crescent);
+                                holder.result.setText(R.string.correct);
+                                holder.result.setTextColor(mContext.getResources().getColor(R.color.green));
+                            } else {
+                                holder.decreciente_creciente.setText(R.string.vacio);
+                                holder.result.setText(R.string.incorrect);
+                                holder.result.setTextColor(mContext.getResources().getColor(R.color.red));
+                            }
+                        } catch (NumberFormatException nfe){
+                            Toast.makeText(mContext,R.string.format,Toast.LENGTH_SHORT).show();
+                            holder.editText1.setText(R.string.vacio);
+                            holder.editText2.setText(R.string.vacio);
+                            holder.editText3.setText(R.string.vacio);
+                            holder.editText4.setText(R.string.vacio);
+                            holder.editText5.setText(R.string.vacio);
+                            holder.editText6.setText(R.string.vacio);
+                            holder.creciente_decreciente.setText(R.string.vacio);
                             holder.decreciente_creciente.setText(R.string.vacio);
-                            holder.result.setText(R.string.incorrect);
-                            holder.result.setTextColor(mContext.getResources().getColor(R.color.red));
+                            holder.result.setText(R.string.vacio);
                         }
                     }
                 }

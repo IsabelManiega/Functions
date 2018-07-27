@@ -152,48 +152,56 @@ public class Exam1Fragment extends  Fragment {
                 if (number.isEmpty() || number2.isEmpty() || number3.isEmpty()) {
                     Toast.makeText(getContext(),R.string.put_number,Toast.LENGTH_SHORT).show();
                 } else {
-                    int numberfinal = Integer.parseInt(number);
-                    int numberfinal2 = Integer.parseInt(number2);
-                    int numberfinal3 = Integer.parseInt(number3);
+                    try{
+                        int numberfinal = Integer.parseInt(number);
+                        int numberfinal2 = Integer.parseInt(number2);
+                        int numberfinal3 = Integer.parseInt(number3);
 
-                    if(numberfinal == 0){
-                        scoreOne += 6.6;
-                        editText.setTextColor(getResources().getColor(R.color.black));
-                        constante.setText(R.string.Subtitle_main);
-                    }else{
-                        scoreOne += 0;
+                        if(numberfinal == 0){
+                            scoreOne += 6.6;
+                            editText.setTextColor(getResources().getColor(R.color.black));
+                            constante.setText(R.string.Subtitle_main);
+                        }else{
+                            scoreOne += 0;
+                            constante.setText(R.string.vacio);
+                            editText.setTextColor(getResources().getColor(R.color.red));
+
+                        }
+
+                        if(numberfinal2 == 0 ){
+                            scoreOne += 6.6;
+                            editText2.setTextColor(getResources().getColor(R.color.black));
+                            constante.setText(R.string.Subtitle_main);
+                        }else{
+                            scoreOne += 0;
+                            editText2.setTextColor(getResources().getColor(R.color.red));
+                            constante.setText(R.string.vacio);
+
+                        }
+
+                        if(numberfinal3 == 0 ){
+                            scoreOne += 6.8;
+                            editText3.setTextColor(getResources().getColor(R.color.black));
+                            constante.setText(R.string.Subtitle_main);
+                        }else{
+                            scoreOne += 0;
+                            editText3.setTextColor(getResources().getColor(R.color.red));
+                            constante.setText(R.string.vacio);
+                        }
+
+                        resultOne.setText( String.valueOf(scoreOne));
+                        resultOne.setTextColor(getResources().getColor(R.color.red));
+                        scoreTotal = scoreOne + scoreTwo + scoreThree + scoreFour + scoreFive;
+                        Toast.makeText(getContext(),String.valueOf(scoreTotal)+ "%",Toast.LENGTH_SHORT).show();
+
+                    } catch (NumberFormatException nfe){
+                        Toast.makeText(getContext(),R.string.format,Toast.LENGTH_SHORT).show();
+                        editText.setText(R.string.vacio);
+                        editText2.setText(R.string.vacio);
+                        editText3.setText(R.string.vacio);
                         constante.setText(R.string.vacio);
-                        editText.setTextColor(getResources().getColor(R.color.red));
-
+                        resultOne.setText(R.string.vacio);
                     }
-
-                    if(numberfinal2 == 0 ){
-                        scoreOne += 6.6;
-                        editText2.setTextColor(getResources().getColor(R.color.black));
-                        constante.setText(R.string.Subtitle_main);
-                    }else{
-                        scoreOne += 0;
-                        editText2.setTextColor(getResources().getColor(R.color.red));
-                        constante.setText(R.string.vacio);
-
-                    }
-
-                    if(numberfinal3 == 0 ){
-                        scoreOne += 6.8;
-                        editText3.setTextColor(getResources().getColor(R.color.black));
-                        constante.setText(R.string.Subtitle_main);
-                    }else{
-                        scoreOne += 0;
-                        editText3.setTextColor(getResources().getColor(R.color.red));
-                        constante.setText(R.string.vacio);
-                    }
-
-                    resultOne.setText( String.valueOf(scoreOne));
-                    resultOne.setTextColor(getResources().getColor(R.color.red));
-
-                    scoreTotal = scoreOne + scoreTwo + scoreThree + scoreFour + scoreFive;
-                    Toast.makeText(getContext(),String.valueOf(scoreTotal)+ "%",Toast.LENGTH_SHORT).show();
-
                 }
 
             }
@@ -213,76 +221,88 @@ public class Exam1Fragment extends  Fragment {
                             number6.isEmpty() || number7.isEmpty() || number8.isEmpty()) {
                         Toast.makeText(getContext(),R.string.put_number,Toast.LENGTH_SHORT).show();
                     } else {
-                        String crecent = ">";
-                        int numberfinal4 = Integer.parseInt(number4);
-                        int numberfinal5 = Integer.parseInt(number5);
-                        int numberfinal6 = Integer.parseInt(number6);
-                        int numberfinal7 = Integer.parseInt(number7);
-                        String numberfinal8 = editText8.getText().toString();
+                        try{
+                            String crecent = ">";
+                            int numberfinal4 = Integer.parseInt(number4);
+                            int numberfinal5 = Integer.parseInt(number5);
+                            int numberfinal6 = Integer.parseInt(number6);
+                            int numberfinal7 = Integer.parseInt(number7);
+                            String numberfinal8 = editText8.getText().toString();
 
-                        if(numberfinal4 == 7){
-                            scoreTwo += 4;
-                            editText4.setTextColor(getResources().getColor(R.color.black));
-                            proporcionalidad.setText(R.string.Subtitle2_main);
-                            decreciente_creciente.setText(R.string.crescent);
-                        }else{
-                            scoreTwo += 0;
-                            editText4.setTextColor(getResources().getColor(R.color.red));
+                            if(numberfinal4 == 7){
+                                scoreTwo += 4;
+                                editText4.setTextColor(getResources().getColor(R.color.black));
+                                proporcionalidad.setText(R.string.Subtitle2_main);
+                                decreciente_creciente.setText(R.string.crescent);
+                            }else{
+                                scoreTwo += 0;
+                                editText4.setTextColor(getResources().getColor(R.color.red));
+                                proporcionalidad.setText(R.string.vacio);
+                                decreciente_creciente.setText(R.string.vacio);
+                            }
+                            if(numberfinal5 == 4){
+                                scoreTwo += 4;
+                                editText5.setTextColor(getResources().getColor(R.color.black));
+                                proporcionalidad.setText(R.string.Subtitle2_main);
+                                decreciente_creciente.setText(R.string.crescent);
+                            }else{
+                                scoreTwo += 0;
+                                editText5.setTextColor(getResources().getColor(R.color.red));
+                                proporcionalidad.setText(R.string.vacio);
+                                decreciente_creciente.setText(R.string.vacio);
+                            }
+
+                            if(numberfinal6 == 7){
+                                scoreTwo += 4;
+                                editText6.setTextColor(getResources().getColor(R.color.black));
+                                proporcionalidad.setText(R.string.Subtitle2_main);
+                                decreciente_creciente.setText(R.string.crescent);
+                            }else{
+                                scoreTwo += 0;
+                                editText6.setTextColor(getResources().getColor(R.color.red));
+                                proporcionalidad.setText(R.string.vacio);
+                                decreciente_creciente.setText(R.string.vacio);
+                            }
+
+                            if(numberfinal7 == 4){
+                                scoreTwo += 4;
+                                editText7.setTextColor(getResources().getColor(R.color.black));
+                                proporcionalidad.setText(R.string.Subtitle2_main);
+                                decreciente_creciente.setText(R.string.crescent);
+                            }else{
+                                scoreTwo += 0;
+                                editText7.setTextColor(getResources().getColor(R.color.red));
+                                proporcionalidad.setText(R.string.vacio);
+                                decreciente_creciente.setText(R.string.vacio);
+                            }
+
+                            if(numberfinal8.equals(crecent)){
+                                scoreTwo += 4;
+                                editText8.setTextColor(getResources().getColor(R.color.black));
+                                proporcionalidad.setText(R.string.Subtitle2_main);
+                                decreciente_creciente.setText(R.string.crescent);
+                            }else{
+                                scoreTwo += 0;
+                                editText8.setTextColor(getResources().getColor(R.color.red));
+                                proporcionalidad.setText(R.string.vacio);
+                                decreciente_creciente.setText(R.string.vacio);
+                            }
+                            resultTwo.setText(String.valueOf(scoreTwo));
+                            resultTwo.setTextColor(getResources().getColor(R.color.red));
+
+                            scoreTotal = scoreOne + scoreTwo + scoreThree + scoreFour + scoreFive;
+                            Toast.makeText(getContext(),String.valueOf(scoreTotal)+ "%",Toast.LENGTH_SHORT).show();
+                        } catch (NumberFormatException nfe){
+                            Toast.makeText(getContext(),R.string.format,Toast.LENGTH_SHORT).show();
+                            editText4.setText(R.string.vacio);
+                            editText5.setText(R.string.vacio);
+                            editText6.setText(R.string.vacio);
+                            editText7.setText(R.string.vacio);
+                            editText8.setText(R.string.vacio);
                             proporcionalidad.setText(R.string.vacio);
                             decreciente_creciente.setText(R.string.vacio);
+                            resultTwo.setText(R.string.vacio);
                         }
-                        if(numberfinal5 == 4){
-                            scoreTwo += 4;
-                            editText5.setTextColor(getResources().getColor(R.color.black));
-                            proporcionalidad.setText(R.string.Subtitle2_main);
-                            decreciente_creciente.setText(R.string.crescent);
-                        }else{
-                            scoreTwo += 0;
-                            editText5.setTextColor(getResources().getColor(R.color.red));
-                            proporcionalidad.setText(R.string.vacio);
-                            decreciente_creciente.setText(R.string.vacio);
-                        }
-
-                        if(numberfinal6 == 7){
-                            scoreTwo += 4;
-                            editText6.setTextColor(getResources().getColor(R.color.black));
-                            proporcionalidad.setText(R.string.Subtitle2_main);
-                            decreciente_creciente.setText(R.string.crescent);
-                        }else{
-                            scoreTwo += 0;
-                            editText6.setTextColor(getResources().getColor(R.color.red));
-                            proporcionalidad.setText(R.string.vacio);
-                            decreciente_creciente.setText(R.string.vacio);
-                        }
-
-                        if(numberfinal7 == 4){
-                            scoreTwo += 4;
-                            editText7.setTextColor(getResources().getColor(R.color.black));
-                            proporcionalidad.setText(R.string.Subtitle2_main);
-                            decreciente_creciente.setText(R.string.crescent);
-                        }else{
-                            scoreTwo += 0;
-                            editText7.setTextColor(getResources().getColor(R.color.red));
-                            proporcionalidad.setText(R.string.vacio);
-                            decreciente_creciente.setText(R.string.vacio);
-                        }
-
-                        if(numberfinal8.equals(crecent)){
-                            scoreTwo += 4;
-                            editText8.setTextColor(getResources().getColor(R.color.black));
-                            proporcionalidad.setText(R.string.Subtitle2_main);
-                            decreciente_creciente.setText(R.string.crescent);
-                        }else{
-                            scoreTwo += 0;
-                            editText8.setTextColor(getResources().getColor(R.color.red));
-                            proporcionalidad.setText(R.string.vacio);
-                            decreciente_creciente.setText(R.string.vacio);
-                        }
-                        resultTwo.setText(String.valueOf(scoreTwo));
-                        resultTwo.setTextColor(getResources().getColor(R.color.red));
-
-                        scoreTotal = scoreOne + scoreTwo + scoreThree + scoreFour + scoreFive;
-                        Toast.makeText(getContext(),String.valueOf(scoreTotal)+ "%",Toast.LENGTH_SHORT).show();
                     }
                 }
             });
@@ -298,46 +318,54 @@ public class Exam1Fragment extends  Fragment {
                     if ( number9.isEmpty() || number10.isEmpty() || number11.isEmpty()) {
                         Toast.makeText(getContext(),R.string.put_number,Toast.LENGTH_SHORT).show();
                     } else {
-                        String decrecent = "<";
-                        int numberfinal9 = Integer.parseInt(number9);
-                        int numberfinal10 = Integer.parseInt(number10);
-                        String numberfinal11 = editText11.getText().toString();
+                        try{
+                            String decrecent = "<";
+                            int numberfinal9 = Integer.parseInt(number9);
+                            int numberfinal10 = Integer.parseInt(number10);
+                            String numberfinal11 = editText11.getText().toString();
 
-                        if(numberfinal9 == -3 ){
-                            scoreThree += 6.8;
-                            editText9.setTextColor(getResources().getColor(R.color.black));
-                            proporcionalidad2.setText(R.string.Subtitle2_main);
-                        }else{
-                            scoreThree += 0;
-                            editText9.setTextColor(getResources().getColor(R.color.red));
+                            if(numberfinal9 == -3 ){
+                                scoreThree += 6.8;
+                                editText9.setTextColor(getResources().getColor(R.color.black));
+                                proporcionalidad2.setText(R.string.Subtitle2_main);
+                            }else{
+                                scoreThree += 0;
+                                editText9.setTextColor(getResources().getColor(R.color.red));
+                                proporcionalidad2.setText(R.string.vacio);
+                            }
+
+                            if(numberfinal10 == -3 ){
+                                scoreThree += 6.6;
+                                editText10.setTextColor(getResources().getColor(R.color.black));
+                                proporcionalidad2.setText(R.string.Subtitle2_main);
+                            }else{
+                                scoreThree += 0;
+                                editText10.setTextColor(getResources().getColor(R.color.red));
+                                proporcionalidad2.setText(R.string.vacio);
+                            }
+
+                            if(numberfinal11.equals(decrecent)){
+                                scoreThree += 6.6;
+                                editText11.setTextColor(getResources().getColor(R.color.black));
+                                proporcionalidad2.setText(R.string.Subtitle2_main);
+                            }else{
+                                scoreThree += 0;
+                                editText11.setTextColor(getResources().getColor(R.color.red));
+                                proporcionalidad2.setText(R.string.vacio);
+                            }
+                            resultThree.setText( String.valueOf(scoreThree));
+                            resultThree.setTextColor(getResources().getColor(R.color.red));
+
+                            scoreTotal = scoreOne + scoreTwo + scoreThree + scoreFour + scoreFive;
+                            Toast.makeText(getContext(),String.valueOf(scoreTotal)+ "%",Toast.LENGTH_SHORT).show();
+                        } catch (NumberFormatException nfe){
+                            Toast.makeText(getContext(),R.string.format,Toast.LENGTH_SHORT).show();
+                            editText9.setText(R.string.vacio);
+                            editText10.setText(R.string.vacio);
+                            editText11.setText(R.string.vacio);
                             proporcionalidad2.setText(R.string.vacio);
+                            resultThree.setText(R.string.vacio);
                         }
-
-                        if(numberfinal10 == -3 ){
-                            scoreThree += 6.6;
-                            editText10.setTextColor(getResources().getColor(R.color.black));
-                            proporcionalidad2.setText(R.string.Subtitle2_main);
-                        }else{
-                            scoreThree += 0;
-                            editText10.setTextColor(getResources().getColor(R.color.red));
-                            proporcionalidad2.setText(R.string.vacio);
-                        }
-
-                        if(numberfinal11.equals(decrecent)){
-                            scoreThree += 6.6;
-                            editText11.setTextColor(getResources().getColor(R.color.black));
-                            proporcionalidad2.setText(R.string.Subtitle2_main);
-                        }else{
-                            scoreThree += 0;
-                            editText11.setTextColor(getResources().getColor(R.color.red));
-                            proporcionalidad2.setText(R.string.vacio);
-                        }
-                        resultThree.setText( String.valueOf(scoreThree));
-                        resultThree.setTextColor(getResources().getColor(R.color.red));
-
-                        scoreTotal = scoreOne + scoreTwo + scoreThree + scoreFour + scoreFive;
-                        Toast.makeText(getContext(),String.valueOf(scoreTotal)+ "%",Toast.LENGTH_SHORT).show();
-
                     }
                 }
             });
@@ -354,87 +382,100 @@ public class Exam1Fragment extends  Fragment {
                     if ( number12.isEmpty() || number13.isEmpty()|| number15.isEmpty() || number16.isEmpty()) {
                         Toast.makeText(getContext(),R.string.put_number,Toast.LENGTH_SHORT).show();
                     } else {
-                        String decrecent = "<";
-                        int numberfinal12 = Integer.parseInt(number12);
-                        int numberfinal13 = Integer.parseInt(number13);
-                        int numberfinal14 = Integer.parseInt(number14);
-                        String numberfinal15 = editText15.getText().toString();
-                        int numberfinal16 = Integer.parseInt(number16);
+                        try{
+                            String decrecent = "<";
+                            int numberfinal12 = Integer.parseInt(number12);
+                            int numberfinal13 = Integer.parseInt(number13);
+                            int numberfinal14 = Integer.parseInt(number14);
+                            String numberfinal15 = editText15.getText().toString();
+                            int numberfinal16 = Integer.parseInt(number16);
 
-                        if(numberfinal12 == -1){
-                            scoreFour += 4;
-                            editText12.setTextColor(getResources().getColor(R.color.black));
-                            afines.setText(R.string.Subtitle2_2_main);
-                            decreciente_creciente2.setText(R.string.decrease);
-                            decreciente_creciente3.setText(R.string.decrease);
-                        }else{
-                            scoreFour += 0;
-                            editText12.setTextColor(getResources().getColor(R.color.red));
+                            if(numberfinal12 == -1){
+                                scoreFour += 4;
+                                editText12.setTextColor(getResources().getColor(R.color.black));
+                                afines.setText(R.string.Subtitle2_2_main);
+                                decreciente_creciente2.setText(R.string.decrease);
+                                decreciente_creciente3.setText(R.string.decrease);
+                            }else{
+                                scoreFour += 0;
+                                editText12.setTextColor(getResources().getColor(R.color.red));
+                                afines.setText(R.string.vacio);
+                                decreciente_creciente2.setText(R.string.vacio);
+                                decreciente_creciente3.setText(R.string.vacio);
+                            }
+
+                            if( numberfinal13 == 1){
+                                scoreFour += 4;
+                                editText13.setTextColor(getResources().getColor(R.color.black));
+                                afines.setText(R.string.Subtitle2_2_main);
+                                decreciente_creciente2.setText(R.string.decrease);
+                                decreciente_creciente3.setText(R.string.decrease);
+                            }else{
+                                scoreFour += 0;
+                                editText13.setTextColor(getResources().getColor(R.color.red));
+                                afines.setText(R.string.vacio);
+                                decreciente_creciente2.setText(R.string.vacio);
+                                decreciente_creciente3.setText(R.string.vacio);
+                            }
+
+                            if( numberfinal14 == -1 ){
+                                scoreFour += 4;
+                                editText14.setTextColor(getResources().getColor(R.color.black));
+                                afines.setText(R.string.Subtitle2_2_main);
+                                decreciente_creciente2.setText(R.string.decrease);
+                                decreciente_creciente3.setText(R.string.decrease);
+                            }else{
+                                scoreFour += 0;
+                                editText14.setTextColor(getResources().getColor(R.color.red));
+                                afines.setText(R.string.vacio);
+                                decreciente_creciente2.setText(R.string.vacio);
+                                decreciente_creciente3.setText(R.string.vacio);
+                            }
+
+                            if( numberfinal15.equals(decrecent) ){
+                                scoreFour += 4;
+                                editText15.setTextColor(getResources().getColor(R.color.black));
+                                afines.setText(R.string.Subtitle2_2_main);
+                                decreciente_creciente2.setText(R.string.decrease);
+                                decreciente_creciente3.setText(R.string.decrease);
+                            }else{
+                                scoreFour += 0;
+                                editText15.setTextColor(getResources().getColor(R.color.red));
+                                afines.setText(R.string.vacio);
+                                decreciente_creciente2.setText(R.string.vacio);
+                                decreciente_creciente3.setText(R.string.vacio);
+                            }
+
+                            if(numberfinal16 == 1){
+                                scoreFour += 4;
+                                editText16.setTextColor(getResources().getColor(R.color.black));
+                                afines.setText(R.string.Subtitle2_2_main);
+                                decreciente_creciente2.setText(R.string.decrease);
+                                decreciente_creciente3.setText(R.string.decrease);
+                            }else{
+                                scoreFour += 0;
+                                editText16.setTextColor(getResources().getColor(R.color.red));
+                                afines.setText(R.string.vacio);
+                                decreciente_creciente2.setText(R.string.vacio);
+                                decreciente_creciente3.setText(R.string.vacio);
+                            }
+                            resultFour.setText( String.valueOf(scoreFour));
+                            resultFour.setTextColor(getResources().getColor(R.color.red));
+
+                            scoreTotal = scoreOne + scoreTwo + scoreThree + scoreFour + scoreFive;
+                            Toast.makeText(getContext(),String.valueOf(scoreTotal)+ "%",Toast.LENGTH_SHORT).show();
+                        } catch (NumberFormatException nfe){
+                            Toast.makeText(getContext(),R.string.format,Toast.LENGTH_SHORT).show();
+                            editText12.setText(R.string.vacio);
+                            editText13.setText(R.string.vacio);
+                            editText14.setText(R.string.vacio);
+                            editText15.setText(R.string.vacio);
+                            editText16.setText(R.string.vacio);
                             afines.setText(R.string.vacio);
                             decreciente_creciente2.setText(R.string.vacio);
                             decreciente_creciente3.setText(R.string.vacio);
+                            resultFour.setText(R.string.vacio);
                         }
-
-                        if( numberfinal13 == 1){
-                            scoreFour += 4;
-                            editText13.setTextColor(getResources().getColor(R.color.black));
-                            afines.setText(R.string.Subtitle2_2_main);
-                            decreciente_creciente2.setText(R.string.decrease);
-                            decreciente_creciente3.setText(R.string.decrease);
-                        }else{
-                            scoreFour += 0;
-                            editText13.setTextColor(getResources().getColor(R.color.red));
-                            afines.setText(R.string.vacio);
-                            decreciente_creciente2.setText(R.string.vacio);
-                            decreciente_creciente3.setText(R.string.vacio);
-                        }
-
-                        if( numberfinal14 == -1 ){
-                            scoreFour += 4;
-                            editText14.setTextColor(getResources().getColor(R.color.black));
-                            afines.setText(R.string.Subtitle2_2_main);
-                            decreciente_creciente2.setText(R.string.decrease);
-                            decreciente_creciente3.setText(R.string.decrease);
-                        }else{
-                            scoreFour += 0;
-                            editText14.setTextColor(getResources().getColor(R.color.red));
-                            afines.setText(R.string.vacio);
-                            decreciente_creciente2.setText(R.string.vacio);
-                            decreciente_creciente3.setText(R.string.vacio);
-                        }
-
-                        if( numberfinal15.equals(decrecent) ){
-                            scoreFour += 4;
-                            editText15.setTextColor(getResources().getColor(R.color.black));
-                            afines.setText(R.string.Subtitle2_2_main);
-                            decreciente_creciente2.setText(R.string.decrease);
-                            decreciente_creciente3.setText(R.string.decrease);
-                        }else{
-                            scoreFour += 0;
-                            editText15.setTextColor(getResources().getColor(R.color.red));
-                            afines.setText(R.string.vacio);
-                            decreciente_creciente2.setText(R.string.vacio);
-                            decreciente_creciente3.setText(R.string.vacio);
-                        }
-
-                        if(numberfinal16 == 1){
-                            scoreFour += 4;
-                            editText16.setTextColor(getResources().getColor(R.color.black));
-                            afines.setText(R.string.Subtitle2_2_main);
-                            decreciente_creciente2.setText(R.string.decrease);
-                            decreciente_creciente3.setText(R.string.decrease);
-                        }else{
-                            scoreFour += 0;
-                            editText16.setTextColor(getResources().getColor(R.color.red));
-                            afines.setText(R.string.vacio);
-                            decreciente_creciente2.setText(R.string.vacio);
-                            decreciente_creciente3.setText(R.string.vacio);
-                        }
-                        resultFour.setText( String.valueOf(scoreFour));
-                        resultFour.setTextColor(getResources().getColor(R.color.red));
-
-                        scoreTotal = scoreOne + scoreTwo + scoreThree + scoreFour + scoreFive;
-                        Toast.makeText(getContext(),String.valueOf(scoreTotal)+ "%",Toast.LENGTH_SHORT).show();
                     }
                 }
             });
@@ -454,115 +495,129 @@ public class Exam1Fragment extends  Fragment {
                             number20.isEmpty() || number21.isEmpty() || number22.isEmpty()) {
                         Toast.makeText(getContext(),R.string.put_number,Toast.LENGTH_SHORT).show();
                     } else {
-                        int numberfinal17 = Integer.parseInt(number17);
-                        int numberfinal18 = Integer.parseInt(number18);
-                        int numberfinal19 = Integer.parseInt(number19);
-                        int numberfinal20 = Integer.parseInt(number20);
-                        int numberfinal21 = Integer.parseInt(number21);
-                        int numberfinal22 = Integer.parseInt(number22);
+                        try{
+                            int numberfinal17 = Integer.parseInt(number17);
+                            int numberfinal18 = Integer.parseInt(number18);
+                            int numberfinal19 = Integer.parseInt(number19);
+                            int numberfinal20 = Integer.parseInt(number20);
+                            int numberfinal21 = Integer.parseInt(number21);
+                            int numberfinal22 = Integer.parseInt(number22);
 
-                        if(numberfinal17 == 2){
-                            scoreFive += 3.4;
-                            editText17.setTextColor(getResources().getColor(R.color.black));
-                            parabola.setText(R.string.Subtitle_main3);
-                            vertice.setText(R.string.vertice_max);
-                            rama_izquierda.setText(R.string.crescent_left);
-                            rama_derecha.setText(R.string.decrease_right);
-                        }else{
-                            scoreFive += 0;
-                            editText17.setTextColor(getResources().getColor(R.color.red));
+                            if(numberfinal17 == 2){
+                                scoreFive += 3.4;
+                                editText17.setTextColor(getResources().getColor(R.color.black));
+                                parabola.setText(R.string.Subtitle_main3);
+                                vertice.setText(R.string.vertice_max);
+                                rama_izquierda.setText(R.string.crescent_left);
+                                rama_derecha.setText(R.string.decrease_right);
+                            }else{
+                                scoreFive += 0;
+                                editText17.setTextColor(getResources().getColor(R.color.red));
+                                parabola.setText(R.string.vacio);
+                                vertice.setText(R.string.vacio);
+                                rama_izquierda.setText(R.string.vacio);
+                                rama_derecha.setText(R.string.vacio);
+                            }
+
+                            if(numberfinal18 == 8){
+                                scoreFive += 3.4;
+                                editText18.setTextColor(getResources().getColor(R.color.black));
+                                parabola.setText(R.string.Subtitle_main3);
+                                vertice.setText(R.string.vertice_min);
+                                rama_izquierda.setText(R.string.crescent_left);
+                                rama_derecha.setText(R.string.decrease_right);
+                            }else{
+                                scoreFive += 0;
+                                editText18.setTextColor(getResources().getColor(R.color.red));
+                                parabola.setText(R.string.vacio);
+                                vertice.setText(R.string.vacio);
+                                rama_izquierda.setText(R.string.vacio);
+                                rama_derecha.setText(R.string.vacio);
+                            }
+
+                            if(numberfinal19 == 8){
+                                scoreFive += 3.2;
+                                editText19.setTextColor(getResources().getColor(R.color.black));
+                                parabola.setText(R.string.Subtitle_main3);
+                                vertice.setText(R.string.vertice_min);
+                                rama_izquierda.setText(R.string.crescent_left);
+                                rama_derecha.setText(R.string.decrease_right);
+                            }else{
+                                scoreFive += 0;
+                                editText19.setTextColor(getResources().getColor(R.color.red));
+                                parabola.setText(R.string.vacio);
+                                vertice.setText(R.string.vacio);
+                                rama_izquierda.setText(R.string.vacio);
+                                rama_derecha.setText(R.string.vacio);
+                            }
+
+                            if(numberfinal20 == -3){
+                                scoreFive += 3.4;
+                                editText20.setTextColor(getResources().getColor(R.color.black));
+                                parabola.setText(R.string.Subtitle_main3);
+                                vertice.setText(R.string.vertice_min);
+                                rama_izquierda.setText(R.string.crescent_left);
+                                rama_derecha.setText(R.string.decrease_right);
+                            }else{
+                                scoreFive += 0;
+                                editText20.setTextColor(getResources().getColor(R.color.red));
+                                parabola.setText(R.string.vacio);
+                                vertice.setText(R.string.vacio);
+                                rama_izquierda.setText(R.string.vacio);
+                                rama_derecha.setText(R.string.vacio);
+                            }
+
+                            if(numberfinal21 == 5){
+                                scoreFive += 3.2;
+                                editText21.setTextColor(getResources().getColor(R.color.black));
+                                parabola.setText(R.string.Subtitle_main3);
+                                vertice.setText(R.string.vertice_min);
+                                rama_izquierda.setText(R.string.crescent_left);
+                                rama_derecha.setText(R.string.decrease_right);
+                            }else{
+                                scoreFive += 0;
+                                editText21.setTextColor(getResources().getColor(R.color.red));
+                                parabola.setText(R.string.vacio);
+                                vertice.setText(R.string.vacio);
+                                rama_izquierda.setText(R.string.vacio);
+                                rama_derecha.setText(R.string.vacio);
+                            }
+
+                            if(numberfinal22 == -3){
+                                scoreFive += 3.4;
+                                editText22.setTextColor(getResources().getColor(R.color.black));
+                                parabola.setText(R.string.Subtitle_main3);
+                                vertice.setText(R.string.vertice_min);
+                                rama_izquierda.setText(R.string.crescent_left);
+                                rama_derecha.setText(R.string.decrease_right);
+                            }else{
+                                scoreFive += 0;
+                                editText22.setTextColor(getResources().getColor(R.color.red));
+                                parabola.setText(R.string.vacio);
+                                vertice.setText(R.string.vacio);
+                                rama_izquierda.setText(R.string.vacio);
+                                rama_derecha.setText(R.string.vacio);
+                            }
+
+                            resultFive.setText( String.valueOf(scoreFive));
+                            resultFive.setTextColor(getResources().getColor(R.color.red));
+
+                            scoreTotal = scoreOne + scoreTwo + scoreThree + scoreFour + scoreFive;
+                            Toast.makeText(getContext(),String.valueOf(scoreTotal)+ "%",Toast.LENGTH_SHORT).show();
+                        } catch (NumberFormatException nfe){
+                            Toast.makeText(getContext(),R.string.format,Toast.LENGTH_SHORT).show();
+                            editText17.setText(R.string.vacio);
+                            editText18.setText(R.string.vacio);
+                            editText19.setText(R.string.vacio);
+                            editText20.setText(R.string.vacio);
+                            editText21.setText(R.string.vacio);
+                            editText22.setText(R.string.vacio);
                             parabola.setText(R.string.vacio);
                             vertice.setText(R.string.vacio);
                             rama_izquierda.setText(R.string.vacio);
                             rama_derecha.setText(R.string.vacio);
+                            resultFive.setText(R.string.vacio);
                         }
-
-                        if(numberfinal18 == 8){
-                            scoreFive += 3.4;
-                            editText18.setTextColor(getResources().getColor(R.color.black));
-                            parabola.setText(R.string.Subtitle_main3);
-                            vertice.setText(R.string.vertice_min);
-                            rama_izquierda.setText(R.string.crescent_left);
-                            rama_derecha.setText(R.string.decrease_right);
-                        }else{
-                            scoreFive += 0;
-                            editText18.setTextColor(getResources().getColor(R.color.red));
-                            parabola.setText(R.string.vacio);
-                            vertice.setText(R.string.vacio);
-                            rama_izquierda.setText(R.string.vacio);
-                            rama_derecha.setText(R.string.vacio);
-                        }
-
-                        if(numberfinal19 == 8){
-                            scoreFive += 3.2;
-                            editText19.setTextColor(getResources().getColor(R.color.black));
-                            parabola.setText(R.string.Subtitle_main3);
-                            vertice.setText(R.string.vertice_min);
-                            rama_izquierda.setText(R.string.crescent_left);
-                            rama_derecha.setText(R.string.decrease_right);
-                        }else{
-                            scoreFive += 0;
-                            editText19.setTextColor(getResources().getColor(R.color.red));
-                            parabola.setText(R.string.vacio);
-                            vertice.setText(R.string.vacio);
-                            rama_izquierda.setText(R.string.vacio);
-                            rama_derecha.setText(R.string.vacio);
-                        }
-
-                        if(numberfinal20 == -3){
-                            scoreFive += 3.4;
-                            editText20.setTextColor(getResources().getColor(R.color.black));
-                            parabola.setText(R.string.Subtitle_main3);
-                            vertice.setText(R.string.vertice_min);
-                            rama_izquierda.setText(R.string.crescent_left);
-                            rama_derecha.setText(R.string.decrease_right);
-                        }else{
-                            scoreFive += 0;
-                            editText20.setTextColor(getResources().getColor(R.color.red));
-                            parabola.setText(R.string.vacio);
-                            vertice.setText(R.string.vacio);
-                            rama_izquierda.setText(R.string.vacio);
-                            rama_derecha.setText(R.string.vacio);
-                        }
-
-                        if(numberfinal21 == 5){
-                            scoreFive += 3.2;
-                            editText21.setTextColor(getResources().getColor(R.color.black));
-                            parabola.setText(R.string.Subtitle_main3);
-                            vertice.setText(R.string.vertice_min);
-                            rama_izquierda.setText(R.string.crescent_left);
-                            rama_derecha.setText(R.string.decrease_right);
-                        }else{
-                            scoreFive += 0;
-                            editText21.setTextColor(getResources().getColor(R.color.red));
-                            parabola.setText(R.string.vacio);
-                            vertice.setText(R.string.vacio);
-                            rama_izquierda.setText(R.string.vacio);
-                            rama_derecha.setText(R.string.vacio);
-                        }
-
-                        if(numberfinal22 == -3){
-                            scoreFive += 3.4;
-                            editText22.setTextColor(getResources().getColor(R.color.black));
-                            parabola.setText(R.string.Subtitle_main3);
-                            vertice.setText(R.string.vertice_min);
-                            rama_izquierda.setText(R.string.crescent_left);
-                            rama_derecha.setText(R.string.decrease_right);
-                        }else{
-                            scoreFive += 0;
-                            editText22.setTextColor(getResources().getColor(R.color.red));
-                            parabola.setText(R.string.vacio);
-                            vertice.setText(R.string.vacio);
-                            rama_izquierda.setText(R.string.vacio);
-                            rama_derecha.setText(R.string.vacio);
-                        }
-
-                        resultFive.setText( String.valueOf(scoreFive));
-                        resultFive.setTextColor(getResources().getColor(R.color.red));
-
-                        scoreTotal = scoreOne + scoreTwo + scoreThree + scoreFour + scoreFive;
-                        Toast.makeText(getContext(),String.valueOf(scoreTotal)+ "%",Toast.LENGTH_SHORT).show();
-
                     }
                 }
             });

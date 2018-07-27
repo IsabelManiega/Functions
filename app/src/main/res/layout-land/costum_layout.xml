@@ -30,7 +30,7 @@
             android:gravity="center">
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:textColor="@color/colorPrimaryDark"
                 android:text="@string/title_main"
@@ -38,11 +38,11 @@
                 android:textSize="20sp" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/colorAccent"
-                android:text="@string/Subtitle_main"
                 android:id="@+id/textview2"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="@string/Subtitle_main3"
+                android:textColor="@color/colorAccent"
                 android:textSize="20sp" />
         </LinearLayout>
 

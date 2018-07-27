@@ -20,13 +20,13 @@
     <string name="Subtitle_main">Constant Functions</string>
     <string name="title_main2">Lesson 2</string>
     <string name="Subtitle_main2">Lineal Functions</string>
-    <string name="Subtitle2_main">Direct Proportionality Functions or linear</string>
+    <string name="Subtitle2_main">Direct Proportionality Functions \nor linear</string>
     <string name="Subtitle2_2_main">Related Functions</string>
     <string name="ExercicesActivity">Exercices</string>
     <string name="title_main3">Lesson 3</string>
-    <string name="Subtitle_main3"> Polynomial of degree 2 Function or Quadratic</string>
+    <string name="Subtitle_main3"> Polynomial of degree 2 Function \nor Quadratic</string>
     <string name="title_main4">Lesson 4</string>
-    <string name="subtitle_main4">Inversely Proportional Function or Hyperbolic</string>
+    <string name="subtitle_main4">Inversely Proportional Function \nor Hyperbolic</string>
 
     <string name="title_mainEx">Test</string>
     <string name="test1">Test 1</string>
@@ -61,5 +61,6 @@
     <string name="vertice_min">The vertex is minimum</string>
 
     <string name="nota">Score:  </string>
-    <string name="porcentage">% </string>
+    <string name="porcentage">%</string>
+    <string name="format">The format is not correct, please only numbers</string>
 </resources>
