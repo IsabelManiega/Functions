@@ -91,4 +91,13 @@ public class Theme1ExerActivity extends AppCompatActivity {
         listView.onRestoreInstanceState(savedRecyclerLayoutState);
 
     }
+
+    @Override
+    public void onBackPressed() {
+
+        Intent back = new Intent(Theme1ExerActivity.this, MainActivity.class);
+        startActivity(back);
+        finish();
+        super.onBackPressed();
+    }
 }

@@ -166,10 +166,9 @@ public class Exam1Fragment extends  Fragment {
                             scoreOne += 0;
                             constante.setText(R.string.vacio);
                             editText.setTextColor(getResources().getColor(R.color.red));
-
                         }
 
-                        if(numberfinal2 == 0 ){
+                        if(numberfinal2 == 0){
                             scoreOne += 6.6;
                             editText2.setTextColor(getResources().getColor(R.color.black));
                             constante.setText(R.string.Subtitle_main);
@@ -177,10 +176,9 @@ public class Exam1Fragment extends  Fragment {
                             scoreOne += 0;
                             editText2.setTextColor(getResources().getColor(R.color.red));
                             constante.setText(R.string.vacio);
-
                         }
 
-                        if(numberfinal3 == 0 ){
+                        if(numberfinal3 == 0){
                             scoreOne += 6.8;
                             editText3.setTextColor(getResources().getColor(R.color.black));
                             constante.setText(R.string.Subtitle_main);
@@ -524,7 +522,7 @@ public class Exam1Fragment extends  Fragment {
                                 scoreFive += 3.4;
                                 editText18.setTextColor(getResources().getColor(R.color.black));
                                 parabola.setText(R.string.Subtitle_main3);
-                                vertice.setText(R.string.vertice_min);
+                                vertice.setText(R.string.vertice_max);
                                 rama_izquierda.setText(R.string.crescent_left);
                                 rama_derecha.setText(R.string.decrease_right);
                             }else{
@@ -540,7 +538,7 @@ public class Exam1Fragment extends  Fragment {
                                 scoreFive += 3.2;
                                 editText19.setTextColor(getResources().getColor(R.color.black));
                                 parabola.setText(R.string.Subtitle_main3);
-                                vertice.setText(R.string.vertice_min);
+                                vertice.setText(R.string.vertice_max);
                                 rama_izquierda.setText(R.string.crescent_left);
                                 rama_derecha.setText(R.string.decrease_right);
                             }else{
@@ -556,7 +554,7 @@ public class Exam1Fragment extends  Fragment {
                                 scoreFive += 3.4;
                                 editText20.setTextColor(getResources().getColor(R.color.black));
                                 parabola.setText(R.string.Subtitle_main3);
-                                vertice.setText(R.string.vertice_min);
+                                vertice.setText(R.string.vertice_max);
                                 rama_izquierda.setText(R.string.crescent_left);
                                 rama_derecha.setText(R.string.decrease_right);
                             }else{
@@ -572,7 +570,7 @@ public class Exam1Fragment extends  Fragment {
                                 scoreFive += 3.2;
                                 editText21.setTextColor(getResources().getColor(R.color.black));
                                 parabola.setText(R.string.Subtitle_main3);
-                                vertice.setText(R.string.vertice_min);
+                                vertice.setText(R.string.vertice_max);
                                 rama_izquierda.setText(R.string.crescent_left);
                                 rama_derecha.setText(R.string.decrease_right);
                             }else{
@@ -588,7 +586,7 @@ public class Exam1Fragment extends  Fragment {
                                 scoreFive += 3.4;
                                 editText22.setTextColor(getResources().getColor(R.color.black));
                                 parabola.setText(R.string.Subtitle_main3);
-                                vertice.setText(R.string.vertice_min);
+                                vertice.setText(R.string.vertice_max);
                                 rama_izquierda.setText(R.string.crescent_left);
                                 rama_derecha.setText(R.string.decrease_right);
                             }else{
@@ -623,9 +621,6 @@ public class Exam1Fragment extends  Fragment {
                 }
             });
 
-
             return rootView;
     }
-
-
 }

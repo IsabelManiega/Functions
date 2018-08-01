@@ -90,4 +90,13 @@ public class Theme3ExercActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onBackPressed() {
+
+        Intent back = new Intent(Theme3ExercActivity.this, MainActivity.class);
+        startActivity(back);
+        finish();
+        super.onBackPressed();
+    }
+
 }

@@ -52,4 +52,13 @@ public class Theme2ExercActivity extends AppCompatActivity {
         startActivity(new Intent (this, AfinesActivity.class));
         finish();
     }
+
+    @Override
+    public void onBackPressed() {
+
+        Intent back = new Intent(Theme2ExercActivity.this, MainActivity.class);
+        startActivity(back);
+        finish();
+        super.onBackPressed();
+    }
 }

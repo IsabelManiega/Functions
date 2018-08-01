@@ -18,6 +18,7 @@ import android.widget.TextView;
 
 import com.functions.R;
 import com.functions.models.Lessons;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -45,8 +46,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         holder.mLessonTittle.setText(mLessonsList.get(position).getTitle());
         holder.mLesssonSubtittle.setText(mLessonsList.get(position).getsubtitle());
-        holder.mImage.setImageResource(mLessonsList.get(position).getImage());
-
+        Picasso.get().load(mLessonsList.get(position).getImage()).fit().into(holder.mImage);
     }
 
     @Override
@@ -67,6 +67,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             mLessonTittle = itemView.findViewById(R.id.textview1);
             mLesssonSubtittle = itemView.findViewById(R.id.textview2);
             mImage = itemView.findViewById(R.id.image_main);
+
         }
 
     }

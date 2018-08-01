@@ -97,4 +97,13 @@ public class ProportionDirectActivity extends AppCompatActivity {
         listView.onRestoreInstanceState(savedRecyclerLayoutState);
 
     }
+
+    @Override
+    public void onBackPressed() {
+
+        Intent back = new Intent(ProportionDirectActivity.this, Theme2ExercActivity.class);
+        startActivity(back);
+        finish();
+        super.onBackPressed();
+    }
 }

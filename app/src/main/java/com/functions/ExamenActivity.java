@@ -72,6 +72,13 @@ public class ExamenActivity extends AppCompatActivity{
 
     }
 
+    @Override
+    public void onBackPressed() {
 
+        Intent back = new Intent(ExamenActivity.this, MainActivity.class);
+        startActivity(back);
+        finish();
+        super.onBackPressed();
+    }
 
 }

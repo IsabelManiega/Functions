@@ -13,7 +13,7 @@
     <string name="seek_to_hint">Segundos</string>
     <string name="correct">¡Correcto! Enhorabuena</string>
     <string name="incorrect">¡Incorrecto! Intentalo de nuevo!</string>
-    <string name="title">Halla cual es el resultado de las siguientes cuestiones:</string>
+    <string name="title">Halla cuál es el resultado de las siguientes cuestiones:</string>
     <string name="title2">Halla la función, el eje de simetría, la pendiente, la ordenada en el origen y lo que sea apropiado en cada caso:</string>
     <string name="submit">Comprueba</string>
     <string name="title_main">Tema 1</string>
@@ -28,9 +28,9 @@
     <string name="title_main4">Tema 4</string>
     <string name="subtitle_main4">Funciones proporcionalidad inversa \no Hipérbolas</string>
 
-    <string name="title_mainEx">Exámen</string>
-    <string name="test1">Exámen 1</string>
-    <string name="test2">Exámen 2</string>
+    <string name="title_mainEx">Examen</string>
+    <string name="test1">Examen 1</string>
+    <string name="test2">Examen 2</string>
     <string name="Subtitle_mainEx">Repaso</string>
 
     <string name="y">y = </string>
@@ -41,7 +41,7 @@
     <string name="vacio"></string>
     <string name="x">x</string>
 
-    <string name="put_number">Por favor, No dejes ningún campo vacio</string>
+    <string name="put_number">Por favor, no dejes ningún campo vacio</string>
     <string name="x_">x </string>
     <string name="lineal">___________</string>
 
@@ -64,4 +64,5 @@
     <string name="nota">Nota:  </string>
     <string name="porcentage">%</string>
     <string name="format">Formato no correcto, por favor sólo números</string>
+
 </resources>
